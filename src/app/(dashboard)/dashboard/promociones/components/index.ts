@@ -1,0 +1,5 @@
+export { PromocionCard } from './PromocionCard'
+export { PromocionFormModal } from './PromocionFormModal'
+export { SugerenciasBajaDemandaPanel } from './SugerenciasBajaDemanda'
+export { HeroImpactoPromociones } from './HeroImpactoPromociones'
+export { SugerenciasImpactoPanel } from './SugerenciasImpactoPanel'

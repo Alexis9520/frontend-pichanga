@@ -1,0 +1,10 @@
+// Barrel export para componentes de Ingresos
+export { GraficoBarras } from './GraficoBarras'
+export { GraficoDistribucion } from './GraficoDistribucion'
+export { GraficoTendencia } from './GraficoTendencia'
+export { FiltrosCard } from './FiltrosCard'
+export { ExportarModal } from './ExportarModal'
+export { ResumenTab } from './ResumenTab'
+export { ReservasTab } from './ReservasTab'
+export { VentasExtrasTab } from './VentasExtrasTab'
+export { CanchasTab } from './CanchasTab'

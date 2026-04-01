@@ -1,0 +1,11 @@
+// Barrel export para componentes de Dashboard
+export { MetricCard } from './MetricCard'
+export { ProximasReservas } from './ProximasReservas'
+export { AlertasCard } from './AlertasCard'
+export { ResumenSemanal } from './ResumenSemanal'
+export { AccionesRapidas } from './AccionesRapidas'
+export { IngresosMesCard } from './IngresosMesCard'
+export { HeroIngresos } from './HeroIngresos'
+export { CanchasStatusMap } from './CanchasStatusMap'
+export { AreaChartWidget } from './AreaChartWidget'
+export { ActionCards } from './ActionCards'

@@ -1,0 +1,10 @@
+// Barrel export para componentes de Inventario
+export { ProductoCard } from './ProductoCard'
+export { ProductosTab } from './ProductosTab'
+export { ProductoFormModal } from './ProductoFormModal'
+export { VentasTab } from './VentasTab'
+export { NuevaVentaModal } from './NuevaVentaModal'
+export { MovimientosModal } from './MovimientosModal'
+export { AjusteStockModal } from './AjusteStockModal'
+export { HeroInventario } from './HeroInventario'
+export { CategoriasGrid } from './CategoriasGrid'

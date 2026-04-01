@@ -1,0 +1,10 @@
+// Barrel export para componentes de Configuración
+export { SidebarNav } from './SidebarNav'
+export { PerfilTab } from './PerfilTab'
+export { NegocioTab } from './NegocioTab'
+export { PagosFacturacionTab } from './PagosFacturacionTab'
+export { PoliticasTab } from './PoliticasTab'
+export { NotificacionesTab } from './NotificacionesTab'
+export { UsuariosTab } from './UsuariosTab'
+export { SeguridadTab } from './SeguridadTab'
+export { AvanzadoTab } from './AvanzadoTab'
