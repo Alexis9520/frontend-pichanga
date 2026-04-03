@@ -80,7 +80,13 @@ export default function LoginPage() {
 
     toast.success(`¡Bienvenido, ${user.fullName}!`)
     setIsLoading(false)
-    router.push('/dashboard')
+
+    // Redirect based on role
+    if (user.role === 'admin') {
+      router.push('/admin')
+    } else {
+      router.push('/dashboard')
+    }
   }
 
   const fillCredentials = (email: string, password: string) => {

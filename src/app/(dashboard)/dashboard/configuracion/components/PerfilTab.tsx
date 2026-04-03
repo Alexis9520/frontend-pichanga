@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { User, Camera, Save } from 'lucide-react'
+import { User, Camera, Save, Building2, ArrowRight } from 'lucide-react'
 import {
   Card,
   CardContent,
@@ -14,6 +14,7 @@ import {
   Select,
   Avatar,
 } from '@/components/ui'
+import { SolicitarOwnerModal } from '@/components/owner'
 import type { UsuarioConfig, Idioma, Tema } from '../types'
 
 interface PerfilTabProps {
@@ -21,6 +22,7 @@ interface PerfilTabProps {
   onUpdate: (data: Partial<UsuarioConfig>) => Promise<void>
   onUploadAvatar: (file: File) => Promise<string>
   loading: boolean
+  userRole?: 'user' | 'owner' | 'admin'
 }
 
 const IDIOMAS: { value: Idioma; label: string }[] = [
@@ -34,10 +36,17 @@ const TEMAS: { value: Tema; label: string }[] = [
   { value: 'system', label: '💻 Sistema' },
 ]
 
-export function PerfilTab({ usuarioConfig, onUpdate, onUploadAvatar, loading }: PerfilTabProps) {
+export function PerfilTab({
+  usuarioConfig,
+  onUpdate,
+  onUploadAvatar,
+  loading,
+  userRole,
+}: PerfilTabProps) {
   const [formData, setFormData] = React.useState(usuarioConfig)
   const [isSaving, setIsSaving] = React.useState(false)
   const fileInputRef = React.useRef<HTMLInputElement>(null)
+  const [showOwnerModal, setShowOwnerModal] = React.useState(false)
 
   React.useEffect(() => {
     setFormData(usuarioConfig)
@@ -172,6 +181,39 @@ export function PerfilTab({ usuarioConfig, onUpdate, onUploadAvatar, loading }: 
         </CardContent>
       </Card>
 
+      {/* Solicitar ser Owner - Solo para usuarios normales */}
+      {userRole === 'user' && (
+        <Card className="border-primary/20 from-primary/5 bg-gradient-to-r to-transparent">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Building2 className="text-primary h-5 w-5" />
+              ¿Tienes un complejo de canchas?
+            </CardTitle>
+            <CardDescription>
+              Conviértete en Owner y gestiona tus propias canchas desde la plataforma
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center justify-between">
+              <div className="space-y-1">
+                <p className="text-muted-foreground text-sm">
+                  Podrás crear canchas, configurar horarios, gestionar reservas y mucho más.
+                </p>
+                <ul className="text-muted-foreground text-xs">
+                  <li>✓ Gestión completa de tus canchas</li>
+                  <li>✓ Sistema de reservas y pagos</li>
+                  <li>✓ Estadísticas y reportes</li>
+                </ul>
+              </div>
+              <Button onClick={() => setShowOwnerModal(true)} className="shrink-0">
+                Solicitar ser Owner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Botón guardar */}
       <div className="flex justify-end">
         <Button type="submit" isLoading={isSaving || loading}>
@@ -179,6 +221,19 @@ export function PerfilTab({ usuarioConfig, onUpdate, onUploadAvatar, loading }: 
           Guardar cambios
         </Button>
       </div>
+
+      {/* Modal de solicitar ser owner */}
+      <SolicitarOwnerModal
+        open={showOwnerModal}
+        onOpenChange={setShowOwnerModal}
+        onSubmit={async (data) => {
+          // Aquí iría la llamada a la API para enviar la solicitud
+          console.log('Solicitud enviada:', data)
+          // Simular envío
+          await new Promise((resolve) => setTimeout(resolve, 1000))
+          setShowOwnerModal(false)
+        }}
+      />
     </form>
   )
 }

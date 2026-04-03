@@ -140,8 +140,8 @@ export function useReservas(): UseReservasReturn {
       duracionHoras: duracionNum,
       precioBase,
       totalPrice,
-      status: data.adelanto > 0 ? 'confirmed' : 'pending_payment',
-      source: 'manual',
+      status: data.adelanto > 0 ? 'confirmed' : 'pending',
+      source: 'web_owner',
       clienteNombre: data.clienteNombre,
       clienteTelefono: data.clienteTelefono,
       clienteEmail: data.clienteEmail,
@@ -222,7 +222,7 @@ export function useReservas(): UseReservasReturn {
           if (reserva.id === id) {
             return {
               ...reserva,
-              status: conReembolso ? 'cancelled_with_refund' : 'cancelled',
+              status: 'cancelled' as const,
               estadoPago: conReembolso ? 'refunded' : reserva.estadoPago,
               observaciones: `${reserva.observaciones || ''}\nCancelación: ${motivo}`.trim(),
               updatedAt: new Date().toISOString(),
@@ -275,9 +275,7 @@ export function useReservas(): UseReservasReturn {
               saldoPendiente: Math.max(nuevoSaldo, 0),
               estadoPago: nuevoEstadoPago,
               status:
-                reserva.status === 'pending_payment' && totalPagado > 0
-                  ? 'confirmed'
-                  : reserva.status,
+                reserva.status === 'pending' && totalPagado > 0 ? 'confirmed' : reserva.status,
               updatedAt: new Date().toISOString(),
             }
           }

@@ -2,10 +2,10 @@
 
 ## Pichanga Dual — Sistema de Reservas de Canchas de Fútbol + Red Social Deportiva
 
-**Versión:** 2.0  
-**Fecha:** Marzo 2026  
+**Versión:** 2.2  
+**Fecha:** Abril 2026  
 **Estado:** Especificación Técnica para Desarrollo  
-**Tipo:** Sistema Multiplataforma (App Móvil + Web Dashboard)
+**Tipo:** Sistema Multiplataforma (App Móvil + Web Dashboard + Admin Dashboard)
 
 ---
 
@@ -35,63 +35,234 @@ El modelo de negocio se sustenta en una comisión por transacción que inicialme
 
 ### 2.1 Funcionalidades para Jugadores (App Móvil)
 
-| ID | Funcionalidad | Prioridad |
-|----|---------------|-----------|
-| F01 | Registro de usuarios mediante email/contraseña y autenticación con Google | Alta |
-| F02 | Visualización de canchas de fútbol en un mapa interactivo con geolocalización | Alta |
-| F03 | Filtrado de canchas por ciudad, precio, características y disponibilidad | Alta |
-| F04 | Sistema de reserva por horas (1, 2, 3 horas consecutivas) | Alta |
-| F05 | Integración de pagos mediante Culqi con confirmación instantánea | Alta |
-| F06 | Generación de comprobantes de pago (boleta/factura) y código QR | Alta |
-| F07 | Historial completo de reservas realizadas con estado actual | Alta |
-| F08 | Sistema de favoritos para guardar canchas preferidas | Media |
-| F09 | Reseñas y calificaciones de canchas con fotos y comentarios | Media |
-| F10 | Sistema de conexión entre usuarios para formar equipos | Media |
-| F11 | Notificaciones push para recordatorios de partidos | Media |
-| F12 | Chat in-app integrado con enlace directo a WhatsApp | Media |
-| F13 | Visualización de precios diferenciados por slot de horario | Alta |
-| F14 | Descubrir y aplicar promociones/ofertas disponibles | Alta |
-| F15 | Agregar productos extras y servicios a la reserva (pre-venta) | Alta |
-| F16 | Opción de pago parcial (adelanto mínimo) o pago total | Alta |
-| F17 | Ver información de políticas de la cancha (tolerancia, cancelación) | Media |
-| F18 | Ver descuentos aplicados en el resumen de reserva | Media |
+| ID  | Funcionalidad                                                                 | Prioridad |
+| --- | ----------------------------------------------------------------------------- | --------- |
+| F01 | Registro de usuarios mediante email/contraseña y autenticación con Google     | Alta      |
+| F02 | Visualización de canchas de fútbol en un mapa interactivo con geolocalización | Alta      |
+| F03 | Filtrado de canchas por ciudad, precio, características y disponibilidad      | Alta      |
+| F04 | Sistema de reserva por horas (1, 2, 3 horas consecutivas)                     | Alta      |
+| F05 | Integración de pagos mediante Culqi con confirmación instantánea              | Alta      |
+| F06 | Generación de comprobantes de pago (boleta/factura) y código QR               | Alta      |
+| F07 | Historial completo de reservas realizadas con estado actual                   | Alta      |
+| F08 | Sistema de favoritos para guardar canchas preferidas                          | Media     |
+| F09 | Reseñas y calificaciones de canchas con fotos y comentarios                   | Media     |
+| F10 | Sistema de conexión entre usuarios para formar equipos                        | Media     |
+| F11 | Notificaciones push para recordatorios de partidos                            | Media     |
+| F12 | Chat in-app integrado con enlace directo a WhatsApp                           | Media     |
+| F13 | Visualización de precios diferenciados por slot de horario                    | Alta      |
+| F14 | Descubrir y aplicar promociones/ofertas disponibles                           | Alta      |
+| F15 | Agregar productos extras y servicios a la reserva (pre-venta)                 | Alta      |
+| F16 | Opción de pago parcial (adelanto mínimo) o pago total                         | Alta      |
+| F17 | Ver información de políticas de la cancha (tolerancia, cancelación)           | Media     |
+| F18 | Ver descuentos aplicados en el resumen de reserva                             | Media     |
 
 ### 2.2 Funcionalidades para Dueños de Canchas (Web Dashboard)
 
-| ID | Funcionalidad | Prioridad |
-|----|---------------|-----------|
-| D01 | Autenticación segura con email/contraseña | Alta |
-| D02 | Gestión completa de canchas (crear, editar, desactivar) | Alta |
-| D03 | Configuración de horarios de operación por día | Alta |
-| D04 | Definición de precios por hora con rangos diferenciados | Alta |
-| D05 | Sistema de bloqueo manual de horarios específicos | Alta |
-| D06 | Visualización de reservas en tiempo real | Alta |
-| D07 | Panel de ingresos con estadísticas y gráficos | Alta |
-| D08 | Gestión de políticas de cancelación y reembolso | Media |
-| D09 | Acceso a datos de contacto de usuarios | Media |
-| D10 | Sistema de horarios flexibles con precios por slot de 30 min | Alta |
-| D11 | Configuración de tolerancia para llegada (tiempo de gracia) | Alta |
-| D12 | Sistema de promociones para horarios de baja demanda | Alta |
-| D13 | Sistema de inventario y ventas extras (productos y servicios) | Alta |
-| D14 | Sistema de pagos parciales/adelantos configurables | Alta |
-| D15 | Políticas de reserva personalizables por cancha | Media |
-| D16 | Sistema de reservas manuales (independiente de app móvil) | Alta |
+| ID  | Funcionalidad                                                 | Prioridad |
+| --- | ------------------------------------------------------------- | --------- |
+| D01 | Autenticación segura con email/contraseña                     | Alta      |
+| D02 | Gestión completa de canchas (crear, editar, desactivar)       | Alta      |
+| D03 | Configuración de horarios de operación por día                | Alta      |
+| D04 | Definición de precios por hora con rangos diferenciados       | Alta      |
+| D05 | Sistema de bloqueo manual de horarios específicos             | Alta      |
+| D06 | Visualización de reservas en tiempo real                      | Alta      |
+| D07 | Panel de ingresos con estadísticas y gráficos                 | Alta      |
+| D08 | Gestión de políticas de cancelación y reembolso               | Media     |
+| D09 | Acceso a datos de contacto de usuarios                        | Media     |
+| D10 | Sistema de horarios flexibles con precios por slot de 30 min  | Alta      |
+| D11 | Configuración de tolerancia para llegada (tiempo de gracia)   | Alta      |
+| D12 | Sistema de promociones para horarios de baja demanda          | Alta      |
+| D13 | Sistema de inventario y ventas extras (productos y servicios) | Alta      |
+| D14 | Sistema de pagos parciales/adelantos configurables            | Alta      |
+| D15 | Políticas de reserva personalizables por cancha               | Media     |
+| D16 | Sistema de reservas manuales (independiente de app móvil)     | Alta      |
 
 ### 2.3 Funcionalidades para Administradores (Super-Admins)
 
-| ID | Funcionalidad | Prioridad |
-|----|---------------|-----------|
-| A01 | Panel de control general con métricas | Alta |
-| A02 | Aprobación de nuevos dueños de canchas | Alta |
-| A03 | Activación y desactivación de canchas | Alta |
-| A04 | Gestión de comisiones y tasas de la plataforma | Alta |
-| A05 | Visualización de todas las reservas del sistema | Alta |
-| A06 | Reportes de rendimiento por cancha, ciudad y período | Media |
+#### 2.3.1 Gestión de Usuarios y Roles
+
+| ID   | Funcionalidad                                             | Prioridad | Derivado de |
+| ---- | --------------------------------------------------------- | --------- | ----------- |
+| AU01 | Listado de todos los usuarios (jugadores y owners)        | Alta      | F01, D01    |
+| AU02 | Detalle de usuario individual (perfil, historial)         | Alta      | F01, D01    |
+| AU03 | Cambio de roles (asignar/quitar rol owner o admin)        | Alta      | F01, D01    |
+| AU04 | Gestión de estado de usuario (suspender/activar/bloquear) | Alta      | F01, D01    |
+| AU05 | Ver historial de actividad de usuario                     | Media     | F01, D01    |
+| AU06 | Gestión de usuarios con Google OAuth                      | Media     | F01         |
+| AU07 | Resetear contraseña (admin override)                      | Media     | F01         |
+
+**Nota:** AU04 agrupa las funcionalidades AU04-AU05 originales (suspender y desbloquear son la misma acción toggle).
+
+#### 2.3.2 Gestión de Dueños (Owners)
+
+| ID   | Funcionalidad                                         | Prioridad | Derivado de |
+| ---- | ----------------------------------------------------- | --------- | ----------- |
+| AO01 | Listado y gestión de solicitudes de owners pendientes | Alta      | D02, A02    |
+| AO02 | Aprobar/rechazar solicitud de owner                   | Alta      | A02         |
+| AO03 | Listado de owners activos                             | Alta      | D02         |
+| AO04 | Detalle de owner (canchas, ingresos, configuraciones) | Alta      | D02-D16     |
+| AO05 | Gestión de estado de owner (suspender/reactivar)      | Alta      | D02, A03    |
+| AO06 | Ver canchas asociadas al owner                        | Alta      | D02         |
+| AO07 | Ver configuraciones del owner                         | Media     | D03-D15     |
+| AO08 | Ver ingresos y comisiones del owner por período       | Alta      | D07, A04    |
+| AO09 | Contactar owner (email/teléfono)                      | Media     | D09         |
+| AO10 | Historial de actividad del owner                      | Media     | D02-D16     |
+
+**Nota:** AO01 agrupa AO01-AO03 originales (listado pendientes + aprobación/rechazo son un flujo). AO05 agrupa AO06-AO07 originales (suspender/reactivar son toggle). AO08 agrupa AO10-AO11 originales.
+
+#### 2.3.3 Gestión de Canchas (Venues)
+
+| ID   | Funcionalidad                                              | Prioridad | Derivado de   |
+| ---- | ---------------------------------------------------------- | --------- | ------------- |
+| AV01 | Listado de todas las canchas del sistema                   | Alta      | D02, A03      |
+| AV02 | Detalle de cancha individual                               | Alta      | D02           |
+| AV03 | Aprobación/rechazo de canchas nuevas                       | Alta      | A03           |
+| AV04 | Gestión de estado de cancha (activar/desactivar/suspender) | Alta      | A03           |
+| AV05 | Ver horarios y precios configurados                        | Alta      | D03, D04, D10 |
+| AV06 | Ver bloqueos de horario                                    | Media     | D05           |
+| AV07 | Ver políticas de la cancha                                 | Media     | D08, D15      |
+| AV08 | Ver promociones activas                                    | Alta      | D12           |
+| AV09 | Ver inventario y stock                                     | Media     | D13           |
+| AV10 | Ver stats de ocupación                                     | Alta      | D06           |
+| AV11 | Editar cancha (override admin)                             | Alta      | D02           |
+| AV12 | Ver fotos de cancha                                        | Media     | D02           |
+| AV13 | Filtros avanzados                                          | Alta      | D02           |
+
+**Nota:** AV03 agrupa AV03-AV04 originales (aprobar/rechazar son un flujo). AV04 agrupa AV05-AV06 originales (activar/desactivar son toggle). AV05 agrupa AV07-AV08 originales.
+
+#### 2.3.4 Gestión de Reservas (System-Wide)
+
+| ID   | Funcionalidad                                   | Prioridad | Derivado de        |
+| ---- | ----------------------------------------------- | --------- | ------------------ |
+| AR01 | Listado de todas las reservas                   | Alta      | A05, D06           |
+| AR02 | Filtros avanzados                               | Alta      | A05                |
+| AR03 | Detalle de reserva individual                   | Alta      | A05                |
+| AR04 | Ver estado de pago y productos extras           | Alta      | D13, D14, F15, F16 |
+| AR05 | Ver promoción aplicada                          | Media     | D12, F14           |
+| AR06 | Ver origen de reserva                           | Alta      | D16                |
+| AR07 | Acciones admin (cancelar, reembolso, modificar) | Alta      | D08, F06, F17      |
+| AR08 | Historial de cambios de reserva                 | Media     | D06                |
+| AR09 | Exportar reservas                               | Media     | A06                |
+| AR10 | Ver disputes/reclamos                           | Alta      | F06                |
+
+**Nota:** AR04 agrupa AR04-AR05 originales. AR07 agrupa AR08-AR09 originales (cancelar y reembolso son acciones del mismo flujo).
+
+#### 2.3.5 Gestión Financiera y Comisiones
+
+| ID   | Funcionalidad                                 | Prioridad | Derivado de |
+| ---- | --------------------------------------------- | --------- | ----------- |
+| AF01 | Panel de ingresos globales                    | Alta      | A01, D07    |
+| AF02 | Ingresos por período                          | Alta      | A06         |
+| AF03 | Ingresos por cancha/owner/ciudad              | Alta      | A06         |
+| AF04 | Gestión de comisiones (configurar, historial) | Alta      | A04         |
+| AF05 | Reporte de pagos Culqi                        | Alta      | F05, D14    |
+| AF06 | Reporte de reembolsos                         | Alta      | D08, F06    |
+| AF07 | Reporte de pagos parciales vs totales         | Media     | F16, D14    |
+| AF08 | Ventas extras globales                        | Media     | D13         |
+| AF09 | Promociones aplicadas                         | Media     | D12, F14    |
+| AF10 | Exportar reportes financieros                 | Alta      | A06         |
+| AF11 | Gráficos y visualizaciones                    | Alta      | A01, A06    |
+
+**Nota:** AF03 agrupa AF03-AF05 originales (ingresos por cancha, owner, ciudad son el mismo reporte con diferentes filtros). AF04 agrupa AF06-AF07 originales.
+
+#### 2.3.6 Moderación y Contenido
+
+| ID   | Funcionalidad                                 | Prioridad | Derivado de |
+| ---- | --------------------------------------------- | --------- | ----------- |
+| AM01 | Listado y moderación de reseñas               | Alta      | F09         |
+| AM02 | Eliminar reseña con razón                     | Alta      | F09         |
+| AM03 | Ver y gestionar fotos de reseñas              | Alta      | F09         |
+| AM04 | Moderar respuesta de owner                    | Alta      | F09         |
+| AM05 | Listado y resolución de reportes de contenido | Alta      | F09         |
+| AM06 | Ver conexiones entre usuarios                 | Media     | F10         |
+| AM07 | Moderar conexiones                            | Alta      | F10         |
+| AM08 | Ver chats para disputes                       | Media     | F12         |
+
+**Nota:** AM01 agrupa AM01-AM03 originales (listado, moderar, eliminar son el mismo flujo). AM03 agrupa AM04-AM05 originales. AM05 agrupa AM08-AM09 originales.
+
+#### 2.3.7 Configuración Global de Plataforma
+
+| ID   | Funcionalidad                       | Prioridad | Derivado de |
+| ---- | ----------------------------------- | --------- | ----------- |
+| AC01 | Configurar % comisión global        | Alta      | A04         |
+| AC02 | Comisión por cancha (override)      | Media     | A04         |
+| AC03 | Comisión por owner tier             | Media     | A04         |
+| AC04 | Configurar ciudades disponibles     | Alta      | F02, D02    |
+| AC05 | Configurar tipos de deporte         | Alta      | D02         |
+| AC06 | Configurar tipos de superficie      | Alta      | D02         |
+| AC07 | Configurar servicios disponibles    | Alta      | D02         |
+| AC08 | Configurar categorías de productos  | Alta      | D13         |
+| AC09 | Configurar métodos de pago          | Alta      | F05, D14    |
+| AC10 | Templates de notificaciones push    | Alta      | F11, D06    |
+| AC11 | Emails transaccionales              | Alta      | F01, F06    |
+| AC12 | Políticas defaults                  | Media     | D15         |
+| AC13 | Configurar integraciones (API keys) | Alta      | F05         |
+| AC14 | Maintenance mode                    | Alta      | Sistema     |
+| AC15 | Feature flags                       | Alta      | Sistema     |
+
+#### 2.3.8 Reportes y Analytics
+
+| ID   | Funcionalidad                                               | Prioridad | Derivado de        |
+| ---- | ----------------------------------------------------------- | --------- | ------------------ |
+| RP01 | Dashboard principal con KPIs                                | Alta      | A01                |
+| RP02 | Reportes por dimensiones (cancha, owner, ciudad, período)   | Alta      | A06                |
+| RP03 | Reporte de usuarios nuevos                                  | Alta      | F01                |
+| RP04 | Reporte de ocupación global                                 | Alta      | D06                |
+| RP05 | Reportes de features (promociones, extras, pagos parciales) | Media     | D12, D13, F14, F16 |
+| RP06 | Reporte de reseñas                                          | Media     | F09                |
+| RP07 | Reporte de cancelaciones                                    | Alta      | D08, F17           |
+| RP08 | Exportar reportes                                           | Alta      | A06                |
+| RP09 | Comparativas                                                | Media     | A06                |
+
+**Nota:** RP02 agrupa RP02-RP05 originales (reportes por diferentes dimensiones son el mismo reporte con diferentes filtros). RP05 agrupa RP08-RP10 originales.
+
+#### 2.3.9 Notificaciones Admin
+
+| ID   | Funcionalidad                    | Prioridad | Derivado de |
+| ---- | -------------------------------- | --------- | ----------- |
+| AN01 | Alerta: Nueva solicitud de owner | Alta      | A02         |
+| AN02 | Alerta: Nueva cancha en revisión | Alta      | A03         |
+| AN03 | Alerta: Reseña reportada         | Alta      | AM08        |
+| AN04 | Alerta: Dispute/reclamo          | Alta      | AR12        |
+| AN05 | Alerta: Error Culqi              | Alta      | F05         |
+| AN06 | Alerta: Owner suspendido         | Alta      | AU04        |
+| AN07 | Alerta: Baja ocupación           | Media     | D12         |
+| AN08 | Alerta: Stock bajo               | Media     | D13         |
+
+#### 2.3.10 Auditoría y Logs
+
+| ID   | Funcionalidad                | Prioridad | Derivado de |
+| ---- | ---------------------------- | --------- | ----------- |
+| AL01 | Log de acciones admin        | Alta      | Sistema     |
+| AL02 | Log de cambios en canchas    | Alta      | D02-D15     |
+| AL03 | Log de reservas              | Alta      | D06, F04    |
+| AL04 | Log de pagos                 | Alta      | F05, D14    |
+| AL05 | Log de accesos               | Alta      | F01, D01    |
+| AL06 | Log de moderación            | Alta      | F09         |
+| AL07 | Exportar logs                | Media     | Sistema     |
+| AL08 | Configurar retención de logs | Media     | Sistema     |
+
+**Total de funcionalidades Admin: 71 (simplificado de 110 originales)**
+
+Las funcionalidades fueron agrupadas para evitar redundancia. Por ejemplo, "suspender usuario" y "desbloquear usuario" se combinaron en "gestión de estado de usuario" (toggle). Ver notas en cada sección para detalles de agrupación.
 
 ### 2.4 Funcionalidades por Fase de Lanzamiento
 
-#### Fase 1 - Web Dashboard (Independiente)
+#### Fase 0 - Admin Dashboard (Fundación de Plataforma)
+
+**IMPORTANTE:** El Admin Dashboard debe implementarse **ANTES** del Web Dashboard de Owners, ya que los owners requieren aprobación admin para operar.
+
+- Gestión de usuarios y roles
+- Aprobación de solicitudes de owners
+- Aprobación de canchas nuevas
+- Configuración global de plataforma
+- Sistema de auditoría y logs
+- Panel de KPIs globales
+
+#### Fase 1 - Web Dashboard para Owners (Independiente)
+
 El sistema web para dueños funcionará 100% de forma independiente, permitiendo:
+
 - Gestión completa de canchas y horarios
 - Sistema de reservas manuales (para clientes que llaman o llegan al local)
 - Registro de pagos en efectivo/tarjeta en el local
@@ -99,7 +270,10 @@ El sistema web para dueños funcionará 100% de forma independiente, permitiendo
 - Promociones y ofertas configurables
 - Panel de ingresos y estadísticas
 
+**Nota:** Owners pueden crear canchas, pero estas quedan en estado `en_revision` hasta aprobación admin (Fase 0).
+
 #### Fase 2 - App Móvil para Jugadores
+
 - Reservas automáticas desde la app
 - Pagos en línea con Culqi
 - Geolocalización y descubrimiento de canchas
@@ -107,6 +281,7 @@ El sistema web para dueños funcionará 100% de forma independiente, permitiendo
 - Red social y conexiones entre jugadores
 
 #### Funcionalidades para Fase 3 (Futuro)
+
 - Reservas recurrentes automáticas (torneos y ligas)
 - Sistema de mensajería interna entre usuarios
 - Editor de fotos y filtros avanzados para reseñas
@@ -186,11 +361,11 @@ El sistema debe permitir recuperación de contraseña mediante:
 
 #### 4.1.4 Roles de Usuario
 
-| Rol | Descripción | Permisos |
-|-----|-------------|----------|
-| user | Jugador estándar | Reservar, reseñar, Favoritos, Conexiones |
-| owner | Dueño de canchas | Gestionar sus canchas, ver reservas, configurar precios |
-| admin | Super-administrador | Acceso completo, aprobar owners, gestionar plataforma |
+| Rol   | Descripción         | Permisos                                                |
+| ----- | ------------------- | ------------------------------------------------------- |
+| user  | Jugador estándar    | Reservar, reseñar, Favoritos, Conexiones                |
+| owner | Dueño de canchas    | Gestionar sus canchas, ver reservas, configurar precios |
+| admin | Super-administrador | Acceso completo, aprobar owners, gestionar plataforma   |
 
 ### 4.2 Geolocalización y Descubrimiento de Canchas
 
@@ -216,12 +391,12 @@ El sistema debe permitir buscar canchas mediante:
 
 El sistema debe ofrecer los siguientes radios predefinidos:
 
-| Opción | Radio | Uso Recomendado |
-|--------|-------|-----------------|
-| Muy cercano | 500 m | Walking distance |
-| Cercano | 1 km | Barrio/distrito |
-| Medio | 3 km | Zona extendida |
-| Extendido | 5 km | Ciudad completa |
+| Opción        | Radio    | Uso Recomendado  |
+| ------------- | -------- | ---------------- |
+| Muy cercano   | 500 m    | Walking distance |
+| Cercano       | 1 km     | Barrio/distrito  |
+| Medio         | 3 km     | Zona extendida   |
+| Extendido     | 5 km     | Ciudad completa  |
 | Personalizado | Variable | Selección manual |
 
 #### 4.2.4 Filtros de Búsqueda
@@ -240,35 +415,52 @@ El sistema debe permitir filtrar por:
 
 Cada cancha debe incluir:
 
-| Campo | Tipo | Obligatorio | Descripción |
-|-------|------|-------------|-------------|
-| nombre | VARCHAR(100) | Sí | Nombre comercial |
-| direccion | TEXT | Sí | Dirección textual |
-| latitud | DECIMAL(10,8) | Sí | Coordenada GPS |
-| longitud | DECIMAL(11,8) | Sí | Coordenada GPS |
-| ciudad | VARCHAR(50) | Sí | Ciudad |
-| distrito | VARCHAR(50) | Sí | Distrito |
-| tipo_deporte | ENUM | Sí | f5, f7, fulbito |
-| superficie | ENUM | Sí | grass_sintetico, grass_natural, losa, concreto |
-| capacidad | INT | Sí | Jugadores máximos por equipo |
-| servicios | JSON | No | Array de servicios disponibles |
-| fotos | JSON | Sí | Array de URLs (mínimo 3) |
-| descripcion | TEXT | No | Descripción adicional |
-| precio_hora_base | DECIMAL(8,2) | Sí | Precio hora normal |
-| precio_hora_noche | DECIMAL(8,2) | Sí | Precio hora nocturna |
-| hora_inicio_diurno | TIME | Sí | Inicio horario normal |
-| hora_inicio_noche | TIME | Sí | Inicio horario nocturno |
-| hora_cierre | TIME | Sí | Hora de cierre |
-| dias_descanso | JSON | No | Días sin operación |
-| estado | ENUM | Sistema | activa, inactiva, en_revision |
+| Campo              | Tipo          | Obligatorio | Descripción                                    |
+| ------------------ | ------------- | ----------- | ---------------------------------------------- |
+| nombre             | VARCHAR(100)  | Sí          | Nombre comercial                               |
+| direccion          | TEXT          | Sí          | Dirección textual                              |
+| latitud            | DECIMAL(10,8) | Sí          | Coordenada GPS                                 |
+| longitud           | DECIMAL(11,8) | Sí          | Coordenada GPS                                 |
+| ciudad             | VARCHAR(50)   | Sí          | Ciudad                                         |
+| distrito           | VARCHAR(50)   | Sí          | Distrito                                       |
+| tipo_deporte       | ENUM          | Sí          | f5, f7, fulbito                                |
+| superficie         | ENUM          | Sí          | grass_sintetico, grass_natural, losa, concreto |
+| capacidad          | INT           | Sí          | Jugadores máximos por equipo                   |
+| servicios          | JSON          | No          | Array de servicios disponibles                 |
+| fotos              | JSON          | Sí          | Array de URLs (mínimo 3)                       |
+| descripcion        | TEXT          | No          | Descripción adicional                          |
+| precio_hora_base   | DECIMAL(8,2)  | Sí          | Precio hora normal                             |
+| precio_hora_noche  | DECIMAL(8,2)  | Sí          | Precio hora nocturna                           |
+| hora_inicio_diurno | TIME          | Sí          | Inicio horario normal                          |
+| hora_inicio_noche  | TIME          | Sí          | Inicio horario nocturno                        |
+| hora_cierre        | TIME          | Sí          | Hora de cierre                                 |
+| dias_descanso      | JSON          | No          | Días sin operación                             |
+| estado             | ENUM          | Sistema     | activa, inactiva, en_revision                  |
 
 #### 4.3.2 Estados de Cancha
 
-| Estado | Descripción | Visible para usuarios |
-|--------|-------------|----------------------|
-| activa | Aprobada y operativa | Sí |
-| inactiva | Desactivada por owner/admin | No |
-| en_revision | Pendiente de aprobación | No |
+| Estado      | Descripción                             | Visible para usuarios | Acción Admin               |
+| ----------- | --------------------------------------- | --------------------- | -------------------------- |
+| en_revision | Creada, pendiente de aprobación         | No                    | aprobar → activa, rechazar |
+| activa      | Aprobada y operativa                    | Sí                    | desactivar                 |
+| inactiva    | Desactivada por owner                   | No                    | activar                    |
+| rechazada   | No aprobada por admin                   | No                    | re-abrir para revisión     |
+| suspendida  | Suspendida por admin (policy violation) | No                    | reactivar                  |
+
+**Flujo de estados:**
+
+```
+Owner crea cancha → en_revision
+        ↓
+    Admin aprueba → activa (visible para usuarios)
+        ↓
+    Owner desactiva → inactiva
+    Admin suspende → suspendida
+
+    Admin rechaza → rechazada
+        ↓
+    Owner edita → en_revision (re-enviar)
+```
 
 #### 4.3.3 Horarios de Operación
 
@@ -310,16 +502,61 @@ El sistema debe calcular el precio total considerando:
 - Si la reserva cruza de horario diurno a nocturno, aplicar precio correcto por segmento
 - Mostrar desglose del cálculo al usuario
 
-#### 4.4.3 Estados de Reserva
+#### 4.4.3 Estados de Reserva y Pago
 
-| Estado | Descripción | Transición |
-|--------|-------------|------------|
-| pending_payment | Iniciada, sin pago confirmado | → confirmed, → cancelled |
-| confirmed | Pagada y confirmada | → in_progress, → cancelled |
-| in_progress | En curso (llegó hora de inicio) | → completed |
-| completed | Finalizó exitosamente | Estado final |
-| cancelled | Cancelada por usuario/owner | Estado final |
-| cancelled_with_refund | Cancelada con reembolso | Estado final |
+**IMPORTANTE:** El sistema separa dos conceptos distintos:
+
+1. **`reservation_status`**: Estado del evento (la reserva en sí)
+2. **`payment_status`**: Estado del pago (transacción financiera)
+
+##### Estados de Reserva (`reservation_status`)
+
+| Estado      | Descripción                     | Transición                 |
+| ----------- | ------------------------------- | -------------------------- |
+| pending     | Creada, esperando confirmación  | → confirmed, → cancelled   |
+| confirmed   | Confirmada y calendarizada      | → in_progress, → cancelled |
+| in_progress | En curso (hora de inicio llegó) | → completed                |
+| completed   | Finalizó exitosamente           | Estado final               |
+| cancelled   | Cancelada                       | Estado final               |
+
+##### Estados de Pago (`payment_status`)
+
+| Estado         | Descripción                                    | reservation_status compatible |
+| -------------- | ---------------------------------------------- | ----------------------------- |
+| pending        | Sin pago registrado                            | pending                       |
+| partial        | Adelanto pagado, saldo pendiente               | pending, confirmed            |
+| completed      | Pago total realizado                           | confirmed, completed          |
+| refunded       | Reembolso total                                | cancelled                     |
+| partial_refund | Reembolso parcial (ej: solo adelanto devuelto) | cancelled                     |
+
+##### Matriz de Estados Combinados
+
+| Escenario                       | reservation_status | payment_status |
+| ------------------------------- | ------------------ | -------------- |
+| Reserva creada sin pago         | pending            | pending        |
+| Adelanto pagado desde app       | confirmed          | partial        |
+| Pago total desde app            | confirmed          | completed      |
+| Reserva manual (pago en cancha) | confirmed          | pending        |
+| Cliente pagó saldo en cancha    | confirmed          | completed      |
+| Partido en curso                | in_progress        | completed      |
+| Partido finalizado              | completed          | completed      |
+| Cancelada con reembolso total   | cancelled          | refunded       |
+| Cancelada sin reembolso         | cancelled          | completed      |
+| Cliente no se presentó          | cancelled          | partial        |
+
+##### Flujo de Estados
+
+```
+Reserva creada → pending (payment: pending/partial/completed)
+        ↓
+    Confirmed → confirmed (payment: pending/partial/completed)
+        ↓
+    Hora inicio → in_progress (payment: completed)
+        ↓
+    Hora fin → completed (payment: completed)
+
+En cualquier punto → cancelled (payment: refunded/partial_refund/completed)
+```
 
 #### 4.4.4 Prevención de Doble Reserva
 
@@ -410,21 +647,21 @@ El sistema debe permitir:
 
 #### 4.8.1 Notificaciones Push
 
-| Tipo | Momento | Destinatario |
-|------|---------|--------------|
-| Recordatorio 24h | 24 horas antes | Usuario |
-| Recordatorio 1h | 1 hora antes | Usuario |
-| Reserva confirmada | Tras pago exitoso | Usuario |
-| Adelanto confirmado | Tras pago parcial | Usuario |
-| Nueva reserva | Cuando se reserva | Owner |
-| Cancelación | Cuando se cancela | Usuario/Owner |
-| Respuesta a reseña | Cuando owner responde | Usuario |
-| Promoción disponible | Cuando hay promo en cancha favorita | Usuario |
-| Promo por vencer | 1 día antes de fin de promo | Usuario |
-| Saldo pendiente | Al llegar el día del partido | Usuario |
-| Stock bajo | Cuando inventario bajo mínimo | Owner |
-| Nueva venta | Cuando se registra venta | Owner |
-| Pago de saldo | Cuando se completa pago en cancha | Usuario/Owner |
+| Tipo                 | Momento                             | Destinatario  |
+| -------------------- | ----------------------------------- | ------------- |
+| Recordatorio 24h     | 24 horas antes                      | Usuario       |
+| Recordatorio 1h      | 1 hora antes                        | Usuario       |
+| Reserva confirmada   | Tras pago exitoso                   | Usuario       |
+| Adelanto confirmado  | Tras pago parcial                   | Usuario       |
+| Nueva reserva        | Cuando se reserva                   | Owner         |
+| Cancelación          | Cuando se cancela                   | Usuario/Owner |
+| Respuesta a reseña   | Cuando owner responde               | Usuario       |
+| Promoción disponible | Cuando hay promo en cancha favorita | Usuario       |
+| Promo por vencer     | 1 día antes de fin de promo         | Usuario       |
+| Saldo pendiente      | Al llegar el día del partido        | Usuario       |
+| Stock bajo           | Cuando inventario bajo mínimo       | Owner         |
+| Nueva venta          | Cuando se registra venta            | Owner         |
+| Pago de saldo        | Cuando se completa pago en cancha   | Usuario/Owner |
 
 #### 4.8.2 Soporte al Cliente
 
@@ -443,6 +680,7 @@ El usuario debe poder ver:
 - Precio total calculado en tiempo real al seleccionar
 
 **Interfaz:**
+
 ```
 ┌─────────────────────────────────────┐
 │  Selecciona tu horario              │
@@ -481,6 +719,7 @@ El usuario debe poder ver:
 5. Descuento aplicado al total
 
 **Ejemplo de UI de promoción:**
+
 ```
 ┌─────────────────────────────────────┐
 │  🎉 PROMOCIÓN DISPONIBLE            │
@@ -497,10 +736,12 @@ El usuario debe poder ver:
 #### 4.8.3.3 Pre-venta de Productos y Servicios
 
 **Ubicación en el flujo:**
+
 - Después de seleccionar horario
 - Antes del pago
 
 **Productos disponibles:**
+
 - Bebidas (agua, gaseosas, cerveza)
 - Snacks
 - Alquiler de balón
@@ -516,6 +757,7 @@ El usuario debe poder ver:
 5. Confirma o continúa sin extras
 
 **Ejemplo de UI:**
+
 ```
 ┌─────────────────────────────────────┐
 │  Agrega extras a tu reserva         │
@@ -539,12 +781,13 @@ El usuario debe poder ver:
 
 El usuario debe ver:
 
-| Opción | Descripción |
-|--------|-------------|
-| Pagar total | Pagar 100% ahora (S/100.00) |
+| Opción         | Descripción                             |
+| -------------- | --------------------------------------- |
+| Pagar total    | Pagar 100% ahora (S/100.00)             |
 | Pagar adelanto | Pagar mínimo (S/30.00), resto en cancha |
 
 **Interfaz de selección:**
+
 ```
 ┌─────────────────────────────────────┐
 │  Opciones de pago                   │
@@ -563,6 +806,7 @@ El usuario debe ver:
 ```
 
 **Confirmación de pago parcial:**
+
 - Estado de pago: "Adelanto pagado"
 - Monto pendiente visible
 - Instrucciones claras de pago restante
@@ -570,19 +814,21 @@ El usuario debe ver:
 #### 4.8.3.5 Información de Políticas de la Cancha
 
 **Ubicación:**
+
 - Detalle de cancha → Sección "Políticas"
 - Durante checkout → Resumen
 
 **Información visible:**
 
-| Política | Cómo se muestra |
-|----------|-----------------|
-| Tolerancia | "Llegada: Tienes 15 min de tolerancia" |
-| Cancelación | "Cancelación gratis hasta 3h antes" |
-| Adelanto mínimo | "Adelanto mínimo: S/30" |
-| Penalidad | Si aplica, se muestra en políticas |
+| Política        | Cómo se muestra                        |
+| --------------- | -------------------------------------- |
+| Tolerancia      | "Llegada: Tienes 15 min de tolerancia" |
+| Cancelación     | "Cancelación gratis hasta 3h antes"    |
+| Adelanto mínimo | "Adelanto mínimo: S/30"                |
+| Penalidad       | Si aplica, se muestra en políticas     |
 
 **Ejemplo en detalle de cancha:**
+
 ```
 ┌─────────────────────────────────────┐
 │  📋 Políticas de la cancha          │
@@ -633,13 +879,13 @@ Cada reserva debe mostrar:
 
 **Estados visuales:**
 
-| Estado | Badge | Descripción |
-|--------|-------|-------------|
-| Confirmada | ✅ Verde | Reserva pagada y confirmada |
-| Adelanto | 💛 Amarillo | Adelanto pagado, saldo pendiente |
-| Pendiente | 🟠 Naranja | Reserva manual, pago en cancha |
-| Completada | ✅ Verde | Partido jugado |
-| Cancelada | ❌ Rojo | Cancelada |
+| Estado     | Badge       | Descripción                      |
+| ---------- | ----------- | -------------------------------- |
+| Confirmada | ✅ Verde    | Reserva pagada y confirmada      |
+| Adelanto   | 💛 Amarillo | Adelanto pagado, saldo pendiente |
+| Pendiente  | 🟠 Naranja  | Reserva manual, pago en cancha   |
+| Completada | ✅ Verde    | Partido jugado                   |
+| Cancelada  | ❌ Rojo     | Cancelada                        |
 
 ### 4.9 Sistema de Horarios y Precios Flexibles
 
@@ -647,11 +893,11 @@ Cada reserva debe mostrar:
 
 El sistema debe permitir a los dueños configurar horarios con granularidad de 30 minutos:
 
-| Característica | Descripción |
-|----------------|-------------|
-| Slots de inicio | Cada 30 minutos (ej: 3:00, 3:30, 4:00, 4:30) |
-| Duración mínima | 1 hora (siempre en bloques de hora) |
-| Duración máxima | Configurable por el dueño (ej: 3 horas) |
+| Característica   | Descripción                                      |
+| ---------------- | ------------------------------------------------ |
+| Slots de inicio  | Cada 30 minutos (ej: 3:00, 3:30, 4:00, 4:30)     |
+| Duración mínima  | 1 hora (siempre en bloques de hora)              |
+| Duración máxima  | Configurable por el dueño (ej: 3 horas)          |
 | Precios por slot | Cada hora de inicio puede tener precio diferente |
 
 #### 4.9.2 Precios Diferenciados por Slot
@@ -659,11 +905,13 @@ El sistema debe permitir a los dueños configurar horarios con granularidad de 3
 El dueño puede configurar precios específicos para cada hora de inicio:
 
 **Ejemplo de configuración:**
+
 - Lunes 3:00 PM - 4:00 PM → S/80
 - Lunes 3:30 PM - 4:30 PM → S/100
 - Lunes 4:00 PM - 5:00 PM → S/90
 
 **Características del sistema de precios:**
+
 - Precio base configurable por rango horario (mañana, tarde, noche)
 - Ajuste individual por cada slot de 30 minutos
 - Horas en punto vs horas intermedias con precios distintos
@@ -673,12 +921,12 @@ El dueño puede configurar precios específicos para cada hora de inicio:
 
 El dueño puede definir rangos horarios con sub-configuraciones:
 
-| Rango | Horario | Precio Base | Ajustes |
-|-------|---------|-------------|---------|
-| Madrugada | 6:00 AM - 8:00 AM | S/60 | Slots 6:00 y 6:30 |
-| Mañana | 8:00 AM - 12:00 PM | S/80 | Horas en punto +10% |
-| Tarde | 12:00 PM - 6:00 PM | S/100 | Slots 3:00 premium |
-| Noche | 6:00 PM - 10:00 PM | S/120 | Horas intermedias -5% |
+| Rango     | Horario            | Precio Base | Ajustes               |
+| --------- | ------------------ | ----------- | --------------------- |
+| Madrugada | 6:00 AM - 8:00 AM  | S/60        | Slots 6:00 y 6:30     |
+| Mañana    | 8:00 AM - 12:00 PM | S/80        | Horas en punto +10%   |
+| Tarde     | 12:00 PM - 6:00 PM | S/100       | Slots 3:00 premium    |
+| Noche     | 6:00 PM - 10:00 PM | S/120       | Horas intermedias -5% |
 
 #### 4.9.4 Plantillas de Horarios
 
@@ -693,14 +941,14 @@ El sistema debe soportar plantillas reutilizables:
 
 **Escenario: Cancha "Los Campeones"**
 
-| Día | Slot | Hora Inicio | Hora Fin | Precio |
-|-----|------|-------------|----------|--------|
-| Lunes | 1 | 3:00 PM | 4:00 PM | S/80 |
-| Lunes | 2 | 3:30 PM | 4:30 PM | S/100 |
-| Lunes | 3 | 4:00 PM | 5:00 PM | S/90 |
-| Lunes | 4 | 4:30 PM | 5:30 PM | S/95 |
-| Sábado | 1 | 3:00 PM | 4:00 PM | S/150 |
-| Sábado | 2 | 3:30 PM | 4:30 PM | S/180 |
+| Día    | Slot | Hora Inicio | Hora Fin | Precio |
+| ------ | ---- | ----------- | -------- | ------ |
+| Lunes  | 1    | 3:00 PM     | 4:00 PM  | S/80   |
+| Lunes  | 2    | 3:30 PM     | 4:30 PM  | S/100  |
+| Lunes  | 3    | 4:00 PM     | 5:00 PM  | S/90   |
+| Lunes  | 4    | 4:30 PM     | 5:30 PM  | S/95   |
+| Sábado | 1    | 3:00 PM     | 4:00 PM  | S/150  |
+| Sábado | 2    | 3:30 PM     | 4:30 PM  | S/180  |
 
 ### 4.10 Sistema de Tolerancia para Llegada
 
@@ -708,23 +956,24 @@ El sistema debe soportar plantillas reutilizables:
 
 El dueño puede configurar el tiempo de tolerancia para cada cancha:
 
-| Campo | Tipo | Valores | Descripción |
-|-------|------|---------|-------------|
-| tolerancia_minutos | INT | 0-30 | Minutos de gracia después de la hora de inicio |
-| politica_exceso | ENUM | perder_reserva, penalidad, tiempo_restante, configurable | Qué pasa si llega tarde |
+| Campo              | Tipo | Valores                                                  | Descripción                                    |
+| ------------------ | ---- | -------------------------------------------------------- | ---------------------------------------------- |
+| tolerancia_minutos | INT  | 0-30                                                     | Minutos de gracia después de la hora de inicio |
+| politica_exceso    | ENUM | perder_reserva, penalidad, tiempo_restante, configurable | Qué pasa si llega tarde                        |
 
 #### 4.10.2 Políticas de Exceso
 
-| Política | Descripción |
-|----------|-------------|
-| perder_reserva | Si excede tolerancia, pierde la reserva sin reembolso |
-| penalidad | Se cobra una penalidad pero puede jugar el tiempo restante |
-| tiempo_restante | Solo puede jugar el tiempo que quede de la reserva |
-| configurable | El dueño define su propia política personalizada |
+| Política        | Descripción                                                |
+| --------------- | ---------------------------------------------------------- |
+| perder_reserva  | Si excede tolerancia, pierde la reserva sin reembolso      |
+| penalidad       | Se cobra una penalidad pero puede jugar el tiempo restante |
+| tiempo_restante | Solo puede jugar el tiempo que quede de la reserva         |
+| configurable    | El dueño define su propia política personalizada           |
 
 #### 4.10.3 Configuración por Dueño
 
 El dueño puede definir:
+
 - Minutos de tolerancia (ej: 10, 15, 20 minutos)
 - Política cuando se excede la tolerancia
 - Penalidad aplicable (monto fijo o porcentaje)
@@ -733,40 +982,216 @@ El dueño puede definir:
 #### 4.10.4 Registro de Llegadas
 
 El sistema debe permitir:
+
 - Marcar hora de llegada del cliente
 - Calcular automáticamente si está dentro de tolerancia
 - Aplicar política configurada si corresponde
 - Notificar al cliente sobre su estatus
 
+#### 4.10.5 UI para Marcar Llegada (Owner Dashboard)
+
+**Pantalla: Reservas del Día**
+
+El owner ve una lista de reservas con botón "Marcar Llegada":
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Reservas del Día - Cancha "Los Campeones"                      │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌───────────────────────────────────────────────────────────┐ │
+│  │ 3:00 PM - 4:00 PM                                        │ │
+│  │ Cliente: Carlos Mendoza                                  │ │
+│  │ Estado: Confirmado ✅                                     │ │
+│  │ Pago: Total pagado (S/100)                               │ │
+│  │                                                           │ │
+│  │ [MARCAR LLEGADA]  [NO SE PRESENTÓ]  [CANCELAR]            │ │
+│  └───────────────────────────────────────────────────────────┘ │
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐ │
+│  │ 4:00 PM - 5:00 PM                                        │ │
+│  │ Cliente: Juan Pérez                                      │ │
+│  │ Estado: Adelanto pagado 💛                                │ │
+│  │ Pago: Adelanto S/30, saldo S/70 pendiente                │ │
+│  │                                                           │ │
+│  │ [MARCAR LLEGADA]  [NO SE PRESENTÓ]  [REGISTRAR SALDO]     │ │
+│  └───────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Modal: Marcar Llegada**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  📍 Marcar Llegada                                              │
+├─────────────────────────────────────────────────────────────────┤
+│  Cliente: Carlos Mendoza                                        │
+│  Hora reservada: 3:00 PM                                        │
+│  Hora actual: 3:08 PM                                           │
+│                                                                 │
+│  Tiempo de llegada: 8 min después                               │
+│  Tolerancia configurada: 15 min                                 │
+│                                                                 │
+│  ✅ DENTRO DE TOLERANCIA                                        │
+│  El cliente puede usar la hora completa.                        │
+│                                                                 │
+│  Método de validación:                                          │
+│  ◉ Escaneó QR                                                   │
+│  ○ Confirmación manual                                          │
+│                                                                 │
+│  [CONFIRMAR LLEGADA]                                            │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Modal: Excede Tolerancia**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  ⚠️ Excede Tolerancia                                           │
+├─────────────────────────────────────────────────────────────────┤
+│  Cliente: Juan Pérez                                            │
+│  Hora reservada: 4:00 PM                                        │
+│  Hora actual: 4:25 PM                                           │
+│                                                                 │
+│  Tiempo de llegada: 25 min después                              │
+│  Tolerancia configurada: 15 min                                 │
+│  Exceso: 10 min                                                 │
+│                                                                 │
+│  Política configurada: tiempo_restante                          │
+│  El cliente solo puede usar el tiempo que queda: 35 min         │
+│                                                                 │
+│  Acciones disponibles:                                          │
+│  [ACEPTAR CON TIEMPO RESTANTE]                                  │
+│  [APLICAR PENALIDAD (S/20)]                                     │
+│  [CANCELAR RESERVA]                                             │
+│                                                                 │
+│  Nota: Se enviará notificación al cliente.                      │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Modal: No Se Presentó**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  ❌ Cliente No Se Presentó                                      │
+├─────────────────────────────────────────────────────────────────┤
+│  Cliente: Pedro García                                          │
+│  Hora reservada: 5:00 PM - 6:00 PM                              │
+│  Estado actual: 5:45 PM                                         │
+│                                                                 │
+│  Pago: Adelanto S/30                                            │
+│  Saldo pendiente: S/70                                          │
+│                                                                 │
+│  Consecuencia:                                                  │
+│  ◉ Pierde el adelanto (S/30)                                   │
+│  ○ Marcar como cancelado sin reembolso                          │
+│  ○ Reembolsar adelanto (caso especial)                          │
+│                                                                 │
+│  Razón (opcional):                                              │
+│  ┌─────────────────────────────────────────────────────────────┐│
+│  │ No llamó, no llegó, no respondió mensajes...                ││
+│  └─────────────────────────────────────────────────────────────┘│
+│                                                                 │
+│  [CONFIRMAR NO SHOW]                                            │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Modal: Registrar Pago de Saldo**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  💰 Registrar Pago de Saldo                                     │
+├─────────────────────────────────────────────────────────────────┤
+│  Cliente: Juan Pérez                                            │
+│  Reserva: 4:00 PM - 5:00 PM                                     │
+│                                                                 │
+│  Adelanto pagado: S/30                                          │
+│  Saldo pendiente: S/70                                          │
+│                                                                 │
+│  Método de pago del saldo:                                      │
+│  ◉ Efectivo                                                    │
+│  ○ Tarjeta (local)                                              │
+│  ○ Yape                                                        │
+│  ○ Plin                                                        │
+│                                                                 │
+│  Monto recibido: S/ [ 70 ]                                      │
+│                                                                 │
+│  [CONFIRMAR PAGO]                                               │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+##### Validación por QR
+
+El owner puede validar llegada escaneando el QR del cliente:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  📱 Escanear QR de Reserva                                      │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│       ┌─────────────────────┐                                   │
+│       │   [CAMARA QR]       │                                   │
+│       │                     │                                   │
+│       │   Apunta al QR      │                                   │
+│       │   del cliente       │                                   │
+│       └─────────────────────┘                                   │
+│                                                                 │
+│  O ingresa código manualmente:                                  │
+│  ┌─────────────────────────────────────────────────────────────┐│
+│  │ RES-XXXX-XXXX                                               ││
+│  └─────────────────────────────────────────────────────────────┘│
+│                                                                 │
+│  [ESCANEAR]           [INGRESAR MANUAL]                         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Resultado del escaneo:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  ✅ Reserva Validada                                            │
+├─────────────────────────────────────────────────────────────────┤
+│  Cliente: Carlos Mendoza                                        │
+│  Cancha: Los Campeones - F5                                     │
+│  Horario: 3:00 PM - 4:00 PM                                     │
+│  Estado: Confirmado                                             │
+│  Pago: Total pagado                                             │
+│                                                                 │
+│  Llegada registrada: 3:08 PM                                    │
+│  Estado: ✅ A tiempo                                            │
+│                                                                 │
+│  [CONTINUAR]                                                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### 4.11 Sistema de Promociones y Ofertas
 
 #### 4.11.1 Tipos de Promociones Soportadas
 
-| Tipo | Descripción | Ejemplo |
-|------|-------------|---------|
-| Descuento Porcentual | Porcentaje de descuento sobre precio base | 20% OFF en martes por la mañana |
-| Precio Fijo Promocional | Precio especial fijo | S/60 en lugar de S/100 los miércoles |
-| Combo de Horas | Descuento por reservar múltiples horas | 2 horas al precio de 1.5 horas |
-| Combo con Productos | Reserva + productos incluidos | Cancha + 6 bebidas por S/120 |
-| Descuento por Recurrencia | Descuento por reservas frecuentes | 15% OFF en tu 3ra reserva del mes |
+| Tipo                      | Descripción                               | Ejemplo                              |
+| ------------------------- | ----------------------------------------- | ------------------------------------ |
+| Descuento Porcentual      | Porcentaje de descuento sobre precio base | 20% OFF en martes por la mañana      |
+| Precio Fijo Promocional   | Precio especial fijo                      | S/60 en lugar de S/100 los miércoles |
+| Combo de Horas            | Descuento por reservar múltiples horas    | 2 horas al precio de 1.5 horas       |
+| Combo con Productos       | Reserva + productos incluidos             | Cancha + 6 bebidas por S/120         |
+| Descuento por Recurrencia | Descuento por reservas frecuentes         | 15% OFF en tu 3ra reserva del mes    |
 
 #### 4.11.2 Configuración de Promociones
 
 Cada promoción debe incluir:
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| nombre | VARCHAR(100) | Nombre de la promoción |
-| tipo | ENUM | Tipo de promoción (ver tabla anterior) |
-| dias_aplicables | JSON | Días de la semana (ej: ["martes", "miercoles"]) |
-| horarios | JSON | Rangos horarios (ej: [{"inicio": "06:00", "fin": "12:00"}]) |
-| fecha_inicio | DATE | Fecha de inicio de vigencia |
-| fecha_fin | DATE | Fecha de fin de vigencia |
-| cupos_maximos | INT | Cantidad máxima de reservas con promoción por día |
-| cupos_por_usuario | INT | Máximo de usos por usuario |
-| valor | DECIMAL(8,2) | Valor del descuento o precio fijo |
-| activa | BOOLEAN | Estado de la promoción |
-| canchas_aplicables | JSON | IDs de canchas donde aplica |
+| Campo              | Tipo         | Descripción                                                 |
+| ------------------ | ------------ | ----------------------------------------------------------- |
+| nombre             | VARCHAR(100) | Nombre de la promoción                                      |
+| tipo               | ENUM         | Tipo de promoción (ver tabla anterior)                      |
+| dias_aplicables    | JSON         | Días de la semana (ej: ["martes", "miercoles"])             |
+| horarios           | JSON         | Rangos horarios (ej: [{"inicio": "06:00", "fin": "12:00"}]) |
+| fecha_inicio       | DATE         | Fecha de inicio de vigencia                                 |
+| fecha_fin          | DATE         | Fecha de fin de vigencia                                    |
+| cupos_maximos      | INT          | Cantidad máxima de reservas con promoción por día           |
+| cupos_por_usuario  | INT          | Máximo de usos por usuario                                  |
+| valor              | DECIMAL(8,2) | Valor del descuento o precio fijo                           |
+| activa             | BOOLEAN      | Estado de la promoción                                      |
+| canchas_aplicables | JSON         | IDs de canchas donde aplica                                 |
 
 #### 4.11.3 Límites y Restricciones
 
@@ -788,41 +1213,43 @@ Sistema inteligente para promocionar horarios con poca ocupación:
 
 #### 4.12.1 Catálogo de Productos y Servicios
 
-| Categoría | Ejemplos | Control de Stock |
-|-----------|----------|------------------|
-| Bebidas | Agua, gaseosas, cerveza, jugos | Opcional |
-| Snacks | Papas, chocolates, maní | Opcional |
-| Artículos Deportivos | Balones, camisetas, espinilleras | Opcional |
-| Alquiler | Balón, árbitro, camerinos | Sin stock |
-| Servicios | Estacionamiento, duchas, quincho | Sin stock |
+| Categoría            | Ejemplos                         | Control de Stock |
+| -------------------- | -------------------------------- | ---------------- |
+| Bebidas              | Agua, gaseosas, cerveza, jugos   | Opcional         |
+| Snacks               | Papas, chocolates, maní          | Opcional         |
+| Artículos Deportivos | Balones, camisetas, espinilleras | Opcional         |
+| Alquiler             | Balón, árbitro, camerinos        | Sin stock        |
+| Servicios            | Estacionamiento, duchas, quincho | Sin stock        |
 
 #### 4.12.2 Gestión de Productos
 
 Cada producto debe incluir:
 
-| Campo | Tipo | Obligatorio | Descripción |
-|-------|------|-------------|-------------|
-| nombre | VARCHAR(100) | Sí | Nombre del producto |
-| categoria | ENUM | Sí | bebida, snack, deportivo, alquiler, servicio |
-| precio | DECIMAL(8,2) | Sí | Precio de venta |
-| costo | DECIMAL(8,2) | No | Costo del producto (para márgenes) |
-| control_stock | BOOLEAN | Sí | Si tiene control de inventario |
-| stock_actual | INT | Condicional | Cantidad actual (si control_stock=true) |
-| stock_minimo | INT | Condicional | Alerta de stock bajo (si control_stock=true) |
-| activo | BOOLEAN | Sí | Si está disponible para venta |
-| imagen_url | VARCHAR | No | Imagen del producto |
+| Campo         | Tipo         | Obligatorio | Descripción                                  |
+| ------------- | ------------ | ----------- | -------------------------------------------- |
+| nombre        | VARCHAR(100) | Sí          | Nombre del producto                          |
+| categoria     | ENUM         | Sí          | bebida, snack, deportivo, alquiler, servicio |
+| precio        | DECIMAL(8,2) | Sí          | Precio de venta                              |
+| costo         | DECIMAL(8,2) | No          | Costo del producto (para márgenes)           |
+| control_stock | BOOLEAN      | Sí          | Si tiene control de inventario               |
+| stock_actual  | INT          | Condicional | Cantidad actual (si control_stock=true)      |
+| stock_minimo  | INT          | Condicional | Alerta de stock bajo (si control_stock=true) |
+| activo        | BOOLEAN      | Sí          | Si está disponible para venta                |
+| imagen_url    | VARCHAR      | No          | Imagen del producto                          |
 
 #### 4.12.3 Control de Stock Configurable
 
 El dueño puede elegir para cada producto:
 
 **Con control de stock:**
+
 - Registro de entradas y salidas
 - Alertas de stock bajo
 - Historial de movimientos
 - Reportes de rotación
 
 **Sin control de stock:**
+
 - Solo registro de ventas
 - Sin alertas de inventario
 - Para productos/servicios de consumo ilimitado
@@ -830,11 +1257,13 @@ El dueño puede elegir para cada producto:
 #### 4.12.4 Sistema de Ventas Híbrido
 
 **Pre-venta con Reserva (Opcional para Cliente):**
+
 - Cliente puede agregar productos al hacer la reserva
 - Productos reservados automáticamente al llegar
 - Pago junto con la reserva o en el local
 
 **Ventas Manuales en Local:**
+
 - El dueño registra ventas de productos
 - Asociación opcional con reserva existente
 - Registro de cliente (nombre/teléfono) sin cuenta
@@ -842,17 +1271,17 @@ El dueño puede elegir para cada producto:
 
 #### 4.12.5 Registro de Ventas
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| reserva_id | UUID | Reserva asociada (opcional) |
-| cliente_nombre | VARCHAR | Nombre del cliente |
-| cliente_telefono | VARCHAR | Teléfono del cliente |
-| productos | JSON | Array de productos vendidos |
-| total | DECIMAL(8,2) | Monto total de la venta |
-| metodo_pago | ENUM | efectivo, tarjeta, yape, plin |
-| fecha | DATETIME | Fecha y hora de la venta |
-| vendedor_id | UUID | Usuario que registró la venta |
+| Campo            | Tipo         | Descripción                   |
+| ---------------- | ------------ | ----------------------------- |
+| id               | UUID         | Identificador único           |
+| reserva_id       | UUID         | Reserva asociada (opcional)   |
+| cliente_nombre   | VARCHAR      | Nombre del cliente            |
+| cliente_telefono | VARCHAR      | Teléfono del cliente          |
+| productos        | JSON         | Array de productos vendidos   |
+| total            | DECIMAL(8,2) | Monto total de la venta       |
+| metodo_pago      | ENUM         | efectivo, tarjeta, yape, plin |
+| fecha            | DATETIME     | Fecha y hora de la venta      |
+| vendedor_id      | UUID         | Usuario que registró la venta |
 
 #### 4.12.6 Reportes de Ventas
 
@@ -868,13 +1297,14 @@ El dueño puede elegir para cada producto:
 
 El dueño puede configurar el monto de adelanto por cancha y/o horario:
 
-| Configuración | Descripción |
-|---------------|-------------|
-| Adelanto por cancha | Monto fijo para cada cancha (ej: S/30) |
-| Adelanto por horario | Monto diferente según día/hora (ej: S/50 sábados noche) |
-| Adelanto mínimo global | Monto mínimo para todo el complejo |
+| Configuración          | Descripción                                             |
+| ---------------------- | ------------------------------------------------------- |
+| Adelanto por cancha    | Monto fijo para cada cancha (ej: S/30)                  |
+| Adelanto por horario   | Monto diferente según día/hora (ej: S/50 sábados noche) |
+| Adelanto mínimo global | Monto mínimo para todo el complejo                      |
 
 **Reglas de configuración:**
+
 - Monto fijo en soles (no porcentaje)
 - Configurable individualmente por cancha
 - Ajustable por día de la semana
@@ -882,17 +1312,20 @@ El dueño puede configurar el monto de adelanto por cancha y/o horario:
 
 #### 4.13.2 Estados de Pago
 
-| Estado | Descripción |
-|--------|-------------|
-| pending | Reserva creada, sin pago |
-| partial | Adelanto pagado, pendiente saldo |
-| completed | Pago completo |
-| refunded | Reembolsado |
-| partial_refund | Reembolso parcial |
+Los estados de pago (`payment_status`) están separados de los estados de reserva. Ver sección 4.4.3 para la matriz completa.
+
+| Estado         | Descripción                                    |
+| -------------- | ---------------------------------------------- |
+| pending        | Sin pago registrado                            |
+| partial        | Adelanto pagado, saldo pendiente               |
+| completed      | Pago total realizado                           |
+| refunded       | Reembolso total procesado                      |
+| partial_refund | Reembolso parcial (ej: solo adelanto devuelto) |
 
 #### 4.13.3 Flujo de Pago Parcial
 
 **Desde App Móvil (Fase 2):**
+
 1. Cliente selecciona horario
 2. Sistema muestra monto de adelanto requerido
 3. Cliente paga adelanto (ej: S/30 de S/100 total)
@@ -900,6 +1333,7 @@ El dueño puede configurar el monto de adelanto por cancha y/o horario:
 5. Resto se paga al llegar al local
 
 **Desde Web Dashboard (Reserva Manual):**
+
 1. Dueño crea reserva manual para cliente
 2. Registra monto de adelanto recibido (si aplica)
 3. Indica método de pago del adelanto
@@ -910,6 +1344,7 @@ El dueño puede configurar el monto de adelanto por cancha y/o horario:
 El dueño tiene control manual sobre el pago del saldo:
 
 **Acciones disponibles:**
+
 - Marcar reserva como "saldo pagado"
 - Registrar método de pago del saldo
 - Marcar reserva como "no se presentó" (si no pagó el resto)
@@ -919,14 +1354,14 @@ El dueño tiene control manual sobre el pago del saldo:
 
 #### 4.13.5 Registro de Pagos
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| reserva_id | UUID | Reserva asociada |
-| tipo_pago | ENUM | adelanto, saldo, completo |
-| monto | DECIMAL(8,2) | Monto pagado |
-| metodo_pago | ENUM | culqi, efectivo, tarjeta_local, yape, plin |
-| fecha_pago | DATETIME | Fecha y hora del pago |
-| registrado_por | UUID | Usuario que registró el pago |
+| Campo          | Tipo         | Descripción                                |
+| -------------- | ------------ | ------------------------------------------ |
+| reserva_id     | UUID         | Reserva asociada                           |
+| tipo_pago      | ENUM         | adelanto, saldo, completo                  |
+| monto          | DECIMAL(8,2) | Monto pagado                               |
+| metodo_pago    | ENUM         | culqi, efectivo, tarjeta_local, yape, plin |
+| fecha_pago     | DATETIME     | Fecha y hora del pago                      |
+| registrado_por | UUID         | Usuario que registró el pago               |
 
 ### 4.14 Sistema de Reservas Manuales
 
@@ -934,29 +1369,29 @@ El dueño tiene control manual sobre el pago del saldo:
 
 Para que el sistema web funcione sin la app móvil:
 
-| Característica | Descripción |
-|----------------|-------------|
-| Registro de cliente | Nombre y teléfono (sin cuenta) |
-| Creación manual | El dueño crea la reserva desde el dashboard |
-| Bloqueo de horario | Reserva manual bloquea el horario igual que automática |
-| Estados | Mismos estados que reservas automáticas |
-| Origen | Diferenciación entre `manual` y `app` |
+| Característica      | Descripción                                            |
+| ------------------- | ------------------------------------------------------ |
+| Registro de cliente | Nombre y teléfono (sin cuenta)                         |
+| Creación manual     | El dueño crea la reserva desde el dashboard            |
+| Bloqueo de horario  | Reserva manual bloquea el horario igual que automática |
+| Estados             | Mismos estados que reservas automáticas                |
+| Origen              | Diferenciación entre `manual` y `app`                  |
 
 #### 4.14.2 Datos de Reserva Manual
 
-| Campo | Tipo | Obligatorio | Descripción |
-|-------|------|-------------|-------------|
-| cliente_nombre | VARCHAR(100) | Sí | Nombre del cliente |
-| cliente_telefono | VARCHAR(20) | Sí | Teléfono de contacto |
-| cliente_email | VARCHAR(100) | No | Email (opcional) |
-| cancha_id | UUID | Sí | Cancha reservada |
-| fecha | DATE | Sí | Fecha de la reserva |
-| hora_inicio | TIME | Sí | Hora de inicio |
-| hora_fin | TIME | Sí | Hora de finalización |
-| precio_total | DECIMAL(8,2) | Sí | Precio total acordado |
-| adelanto | DECIMAL(8,2) | No | Adelanto recibido |
-| metodo_adelanto | ENUM | No | Método del adelanto |
-| observaciones | TEXT | No | Notas del dueño |
+| Campo            | Tipo         | Obligatorio | Descripción           |
+| ---------------- | ------------ | ----------- | --------------------- |
+| cliente_nombre   | VARCHAR(100) | Sí          | Nombre del cliente    |
+| cliente_telefono | VARCHAR(20)  | Sí          | Teléfono de contacto  |
+| cliente_email    | VARCHAR(100) | No          | Email (opcional)      |
+| cancha_id        | UUID         | Sí          | Cancha reservada      |
+| fecha            | DATE         | Sí          | Fecha de la reserva   |
+| hora_inicio      | TIME         | Sí          | Hora de inicio        |
+| hora_fin         | TIME         | Sí          | Hora de finalización  |
+| precio_total     | DECIMAL(8,2) | Sí          | Precio total acordado |
+| adelanto         | DECIMAL(8,2) | No          | Adelanto recibido     |
+| metodo_adelanto  | ENUM         | No          | Método del adelanto   |
+| observaciones    | TEXT         | No          | Notas del dueño       |
 
 #### 4.14.3 Ventajas del Sistema Híbrido
 
@@ -966,18 +1401,359 @@ Para que el sistema web funcione sin la app móvil:
 - Historial unificado de todas las reservas
 - Reportes consolidados
 
+### 4.15 Sistema de Administración (Super-Admins)
+
+#### 4.15.1 Gestión de Usuarios
+
+El administrador debe poder gestionar todos los usuarios del sistema:
+
+| Acción            | Descripción                              | Permisos Required |
+| ----------------- | ---------------------------------------- | ----------------- |
+| Listar usuarios   | Ver todos los jugadores y owners         | admin             |
+| Ver detalle       | Perfil completo, historial, estadísticas | admin             |
+| Cambiar rol       | Asignar/quitar rol owner o admin         | super_admin       |
+| Suspender usuario | Ban temporal o permanente                | admin             |
+| Desbloquear       | Restaurar acceso                         | admin             |
+| Resetear password | Forzar cambio de contraseña              | admin             |
+
+**Datos visibles del usuario:**
+
+- Nombre completo
+- Email
+- Teléfono
+- Rol actual (user, owner, admin)
+- Estado (active, suspended, pending_approval)
+- Fecha de registro
+- Método de registro (email, google_oauth)
+- Número de reservas (si es user)
+- Número de canchas (si es owner)
+- Última actividad
+
+#### 4.15.2 Gestión de Owners
+
+El administrador tiene control completo sobre los dueños de canchas:
+
+##### Aprobación de Owners
+
+**Proceso:**
+
+1. Usuario solicita ser owner (marca interés en registro)
+2. Admin recibe notificación
+3. Admin revisa información del solicitante
+4. Admin aprueba o rechaza con razón documentada
+5. Si aprueba → rol cambia a `owner`, puede crear canchas
+6. Si rechaza → usuario permanece como `user`, puede re-aplicar
+
+**Información requerida para aprobación:**
+
+| Campo            | Obligatorio | Descripción                   |
+| ---------------- | ----------- | ----------------------------- |
+| Nombre negocio   | Sí          | Nombre comercial del complejo |
+| RUC              | Sí          | RUC del negocio               |
+| Teléfono negocio | Sí          | Teléfono de contacto          |
+| Dirección        | Sí          | Dirección del local           |
+| Ciudad           | Sí          | Ciudad donde opera            |
+
+##### Suspensión de Owners
+
+**Causas de suspensión:**
+
+- Violación de políticas de la plataforma
+- Comportamiento fraudulento
+- Reclamos múltiples de usuarios
+- Inactividad prolongada (configurable)
+- Request del owner (vacaciones, mantenimiento)
+
+**Proceso:**
+
+1. Admin documenta razón de suspensión
+2. Sistema notifica al owner
+3. Owner no puede operar (canchas pasan a `inactiva`)
+4. Admin puede reactivar cuando corresponda
+
+#### 4.15.3 Gestión de Canchas (Admin Override)
+
+El administrador tiene poder de override sobre todas las canchas:
+
+##### Estados de Cancha gestionados por Admin
+
+| Estado      | Descripción                         | Acción Admin               |
+| ----------- | ----------------------------------- | -------------------------- |
+| en_revision | Cancha creada, pendiente aprobación | aprobar → activa, rechazar |
+| activa      | Operativa y visible                 | desactivar                 |
+| inactiva    | Desactivada                         | activar                    |
+| rechazada   | No aprobada                         | re-abrir para revisión     |
+| suspendida  | Suspendida por admin                | reactivar                  |
+
+##### Aprobación de Canchas
+
+**Proceso:**
+
+1. Owner crea cancha → estado `en_revision`
+2. Admin recibe notificación
+3. Admin revisa:
+   - Datos completos (nombre, dirección, ciudad)
+   - Fotos (mínimo 3)
+   - Horarios configurados
+   - Precios definidos
+   - Coordenadas GPS válidas
+4. Admin aprueba → estado `activa`, visible para usuarios
+5. Admin rechaza → estado `rechazada`, owner puede corregir
+
+##### Override de Configuración
+
+El admin puede modificar:
+
+- Datos básicos (nombre, dirección, descripción)
+- Horarios de operación
+- Políticas de la cancha
+- Desactivar promociones problemáticas
+- Editar inventario
+
+#### 4.15.4 Gestión Global de Reservas
+
+El admin tiene visibilidad de TODAS las reservas del sistema:
+
+##### Filtros Disponibles
+
+| Filtro         | Valores                                  |
+| -------------- | ---------------------------------------- |
+| Fecha          | Rango de fechas                          |
+| Cancha         | Seleccionar venue específico             |
+| Owner          | Seleccionar owner específico             |
+| Estado         | pending, confirmed, completed, cancelled |
+| Origen         | manual, app                              |
+| Estado de pago | pending, partial, completed, refunded    |
+| Ciudad         | Ciudad específica                        |
+
+##### Acciones Admin sobre Reservas
+
+| Acción            | Descripción                | Caso de uso             |
+| ----------------- | -------------------------- | ----------------------- |
+| Ver detalle       | Información completa       | Auditoría               |
+| Cancelar          | Cancelar reserva con razón | Dispute, problema grave |
+| Forzar reembolso  | Iniciar reembolso en Culqi | Error de sistema        |
+| Modificar horario | Cambiar fecha/hora         | Request especial        |
+| Marcar dispute    | Flag como problema         | Seguimiento             |
+
+#### 4.15.5 Sistema de Comisiones
+
+El admin gestiona el modelo de negocio mediante comisiones:
+
+##### Configuración de Comisiones
+
+| Configuración           | Tipo | Descripción                               |
+| ----------------------- | ---- | ----------------------------------------- |
+| Comisión global         | %    | Porcentaje aplicado a todas las reservas  |
+| Comisión por cancha     | %    | Override individual por venue             |
+| Comisión por owner tier | %    | Owners premium vs regular                 |
+| Período sin comisión    | días | Período promocional inicial (comisión 0%) |
+
+##### Cálculo de Comisión
+
+**Formula CORRECTA:**
+
+```
+comisión = precio_total_reserva × porcentaje_comisión
+
+Donde precio_total_reserva = precio_hora × horas
+```
+
+**Ejemplos:**
+
+| Escenario                          | Cálculo      | Resultado |
+| ---------------------------------- | ------------ | --------- |
+| 2 horas a S/100/hora, comisión 10% | S/200 × 0.10 | S/20      |
+| 1 hora a S/80, comisión 8%         | S/80 × 0.08  | S/6.40    |
+| 3 horas a S/150/hora, comisión 12% | S/450 × 0.12 | S/54      |
+
+**Nota:** El precio total de la reserva ya incluye la multiplicación por horas. No se debe multiplicar la comisión por horas nuevamente.
+
+##### Reporte de Comisiones
+
+| Campo            | Descripción                     |
+| ---------------- | ------------------------------- |
+| Período          | Día, semana, mes, año           |
+| Total reservas   | Número de reservas con comisión |
+| Total ingresos   | Suma de precios de reservas     |
+| Total comisiones | Suma de comisiones cobradas     |
+| Por owner        | Desglose por cada owner         |
+| Por cancha       | Desglose por cada venue         |
+
+#### 4.15.6 Moderación de Contenido
+
+El admin es responsable de moderar reseñas y contenido:
+
+##### Moderación de Reseñas
+
+| Acción          | Descripción                          |
+| --------------- | ------------------------------------ |
+| Listar reseñas  | Ver todas las reseñas del sistema    |
+| Ver reseña      | Detalle completo con fotos           |
+| Editar reseña   | Modificar contenido inappropriate    |
+| Eliminar reseña | Remover reseña con razón documentada |
+| Ver fotos       | Auditoría de imágenes subidas        |
+| Eliminar foto   | Remover foto inappropriate           |
+
+##### Reportes de Usuarios
+
+| Campo            | Descripción                       |
+| ---------------- | --------------------------------- |
+| ID reporte       | Identificador único               |
+| Usuario reporter | Quien reportó                     |
+| Contenido type   | reseña, foto, usuario             |
+| ID contenido     | Reseña/foto/usuario reportado     |
+| Razón            | Categoría del reporte             |
+| Descripción      | Detalle del usuario               |
+| Estado           | pending, reviewed, resolved       |
+| Acción tomada    | maintain, edit, delete, warn, ban |
+
+##### Categorías de Reporte
+
+| Categoría           | Descripción            |
+| ------------------- | ---------------------- |
+| Spam                | Contenido publicitario |
+| Contenido offensive | Lenguaje inappropriate |
+| Información falsa   | Reseña no veraz        |
+| Harassment          | Ataque a persona       |
+| Foto inappropriate  | Imagen no permitida    |
+| Otro                | Categoría general      |
+
+#### 4.15.7 Configuración Global
+
+El admin configura parámetros globales de la plataforma:
+
+##### Parámetros Configurables
+
+| Parámetro            | Tipo    | Descripción                          |
+| -------------------- | ------- | ------------------------------------ |
+| Ciudades             | JSON    | Lista de ciudades disponibles        |
+| Tipos deporte        | ENUM    | f5, f7, fulbito, etc.                |
+| Tipos superficie     | ENUM    | grass, losa, concreto, etc.          |
+| Servicios            | JSON    | Estacionamiento, baños, duchas, etc. |
+| Categorías productos | ENUM    | bebida, snack, deportivo, etc.       |
+| Métodos pago         | ENUM    | culqi, efectivo, yape, plin          |
+| Comisión default     | DECIMAL | Porcentaje global                    |
+| Días sin comisión    | INT     | Período promocional                  |
+| Tolerancia default   | INT     | Minutos de gracia default            |
+| Cancelación horas    | INT     | Horas para cancelar gratis default   |
+
+##### Integraciones Configurables
+
+| Integración  | Parámetros                          |
+| ------------ | ----------------------------------- |
+| Culqi        | API key, Public key, Webhook secret |
+| Cloudinary   | Cloud name, API key, API secret     |
+| SendGrid     | API key, Templates IDs              |
+| Google OAuth | Client ID, Client secret            |
+
+##### Feature Flags
+
+| Flag                | Descripción                       |
+| ------------------- | --------------------------------- |
+| app_enabled         | App móvil activa                  |
+| payments_enabled    | Pagos en línea activos            |
+| promotions_enabled  | Sistema de promociones activo     |
+| extras_enabled      | Ventas extras activo              |
+| reviews_enabled     | Reseñas activas                   |
+| connections_enabled | Conexiones entre usuarios activas |
+
+#### 4.15.8 Dashboard y Analytics
+
+El admin tiene un dashboard con KPIs globales:
+
+##### Dashboard Principal
+
+| KPI                | Descripción                   |
+| ------------------ | ----------------------------- |
+| Usuarios totales   | Suma de jugadores + owners    |
+| Owners activos     | Dueños operando               |
+| Canchas activas    | Venues visibles               |
+| Reservas hoy       | Reservas del día actual       |
+| Ingresos hoy       | Total de ventas del día       |
+| Comisiones hoy     | Comisión cobrada del día      |
+| Ocupación promedio | % de slots ocupados global    |
+| Rating promedio    | Calificación media de reseñas |
+
+##### Gráficos Disponibles
+
+| Gráfico             | Datos                               |
+| ------------------- | ----------------------------------- |
+| Ingresos por día    | Tendencia de últimas 30 días        |
+| Reservas por día    | Tendencia de últimas 30 días        |
+| Usuarios nuevos     | Crecimiento por semana              |
+| Ocupación por hora  | Distribución de slots más populares |
+| Ingresos por ciudad | Distribución geográfica             |
+| Ingresos por owner  | Ranking de owners                   |
+
+##### Reportes Exportables
+
+| Reporte    | Formatos        |
+| ---------- | --------------- |
+| Reservas   | CSV, Excel      |
+| Usuarios   | CSV, Excel      |
+| Ingresos   | CSV, Excel, PDF |
+| Comisiones | CSV, Excel      |
+| Reseñas    | CSV             |
+| Logs       | CSV             |
+
+#### 4.15.9 Sistema de Auditoría
+
+Todas las acciones admin son registradas:
+
+##### Log de Acciones Admin
+
+| Campo       | Descripción                      |
+| ----------- | -------------------------------- |
+| ID          | Identificador único              |
+| Admin ID    | Usuario que ejecutó acción       |
+| Acción      | Tipo de acción realizada         |
+| Target type | usuario, cancha, reserva, reseña |
+| Target ID   | ID del objeto afectado           |
+| Detalles    | JSON con información adicional   |
+| Razón       | Documentación de la acción       |
+| Timestamp   | Fecha y hora                     |
+
+##### Tipos de Acciones Loggeadas
+
+| Acción             | Descripción                     |
+| ------------------ | ------------------------------- |
+| user_suspend       | Usuario suspendido              |
+| user_unsuspend     | Usuario desbloqueado            |
+| owner_approve      | Owner aprobado                  |
+| owner_reject       | Owner rechazado                 |
+| owner_suspend      | Owner suspendido                |
+| venue_approve      | Cancha aprobada                 |
+| venue_reject       | Cancha rechazada                |
+| venue_deactivate   | Cancha desactivada              |
+| venue_edit         | Cancha editada (override)       |
+| reservation_cancel | Reserva cancelada               |
+| reservation_refund | Reembolso forzado               |
+| review_delete      | Reseña eliminada                |
+| review_edit        | Reseña editada                  |
+| config_change      | Configuración global modificada |
+
+##### Retención de Logs
+
+| Período  | Acción                    |
+| -------- | ------------------------- |
+| 90 días  | Logs de acciones admin    |
+| 180 días | Logs de reservas          |
+| 365 días | Logs de pagos             |
+| 2 años   | Logs de auditoría crítica |
+
 ---
 
 ## 5. Requerimientos No Funcionales
 
 ### 5.1 Rendimiento
 
-| Métrica | Objetivo |
-|---------|----------|
-| Tiempo respuesta lectura | ≤ 2 segundos |
+| Métrica                    | Objetivo     |
+| -------------------------- | ------------ |
+| Tiempo respuesta lectura   | ≤ 2 segundos |
 | Tiempo respuesta escritura | ≤ 5 segundos |
-| Usuarios concurrentes | 500+ |
-| Disponibilidad | 99.5% |
+| Usuarios concurrentes      | 500+         |
+| Disponibilidad             | 99.5%        |
 
 ### 5.2 Seguridad
 
@@ -989,11 +1765,11 @@ Para que el sistema web funcione sin la app móvil:
 
 ### 5.3 Compatibilidad
 
-| Plataforma | Versión Mínima |
-|------------|----------------|
-| Android | 6.0 (API 23) |
-| iOS | 12.0 |
-| Web | Chrome, Firefox, Safari, Edge (versiones actuales) |
+| Plataforma | Versión Mínima                                     |
+| ---------- | -------------------------------------------------- |
+| Android    | 6.0 (API 23)                                       |
+| iOS        | 12.0                                               |
+| Web        | Chrome, Firefox, Safari, Edge (versiones actuales) |
 
 ### 5.4 Accesibilidad
 
@@ -1131,144 +1907,310 @@ Para que el sistema web funcione sin la app móvil:
 
 Configuración de precios por slot de tiempo.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues |
-| day_of_week | INT | 0-6 (domingo-sábado) |
-| start_time | TIME | Hora de inicio del slot |
-| end_time | TIME | Hora de fin del slot |
-| slot_duration | INT | Duración en minutos (default: 60) |
-| price | DECIMAL(8,2) | Precio para este slot |
-| is_premium | BOOLEAN | Si es hora en punto (precio mayor) |
-| is_active | BOOLEAN | Si el slot está disponible |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo         | Tipo         | Descripción                        |
+| ------------- | ------------ | ---------------------------------- |
+| id            | UUID         | Identificador único                |
+| venue_id      | UUID         | FK a venues                        |
+| day_of_week   | INT          | 0-6 (domingo-sábado)               |
+| start_time    | TIME         | Hora de inicio del slot            |
+| end_time      | TIME         | Hora de fin del slot               |
+| slot_duration | INT          | Duración en minutos (default: 60)  |
+| price         | DECIMAL(8,2) | Precio para este slot              |
+| is_premium    | BOOLEAN      | Si es hora en punto (precio mayor) |
+| is_active     | BOOLEAN      | Si el slot está disponible         |
+| created_at    | TIMESTAMP    | Fecha de creación                  |
 
 #### 6.2.2 venue_policies
 
 Políticas configurables por cancha.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues (único) |
-| tolerancia_minutos | INT | Minutos de gracia para llegada |
-| politica_exceso | ENUM | perder_reserva, penalidad, tiempo_restante, configurable |
-| adelanto_minimo | DECIMAL(8,2) | Monto mínimo de adelanto |
-| penalidad_monto | DECIMAL(8,2) | Monto de penalidad por exceso |
-| cancelacion_horas | INT | Horas de anticipación para cancelar gratis |
-| reembolso_porcentaje | INT | Porcentaje de reembolso |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo                | Tipo         | Descripción                                              |
+| -------------------- | ------------ | -------------------------------------------------------- |
+| id                   | UUID         | Identificador único                                      |
+| venue_id             | UUID         | FK a venues (único)                                      |
+| tolerancia_minutos   | INT          | Minutos de gracia para llegada                           |
+| politica_exceso      | ENUM         | perder_reserva, penalidad, tiempo_restante, configurable |
+| adelanto_minimo      | DECIMAL(8,2) | Monto mínimo de adelanto                                 |
+| penalidad_monto      | DECIMAL(8,2) | Monto de penalidad por exceso                            |
+| cancelacion_horas    | INT          | Horas de anticipación para cancelar gratis               |
+| reembolso_porcentaje | INT          | Porcentaje de reembolso                                  |
+| created_at           | TIMESTAMP    | Fecha de creación                                        |
 
 #### 6.2.3 promotions
 
 Sistema de promociones y ofertas.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues |
-| nombre | VARCHAR(100) | Nombre de la promoción |
-| tipo | ENUM | descuento_porcentual, precio_fijo, combo_horas, combo_productos, recurrencia |
-| valor | DECIMAL(8,2) | Valor del descuento o precio fijo |
-| dias_aplicables | JSON | Array de días ["lunes", "martes"] |
-| horarios | JSON | Array de rangos [{"inicio": "06:00", "fin": "12:00"}] |
-| fecha_inicio | DATE | Inicio de vigencia |
-| fecha_fin | DATE | Fin de vigencia |
-| cupos_maximos | INT | Máximo de usos por día |
-| cupos_por_usuario | INT | Máximo de usos por usuario |
-| activa | BOOLEAN | Si está activa |
-| canchas_aplicables | JSON | Array de venue_ids |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo              | Tipo         | Descripción                                                                  |
+| ------------------ | ------------ | ---------------------------------------------------------------------------- |
+| id                 | UUID         | Identificador único                                                          |
+| venue_id           | UUID         | FK a venues                                                                  |
+| nombre             | VARCHAR(100) | Nombre de la promoción                                                       |
+| tipo               | ENUM         | descuento_porcentual, precio_fijo, combo_horas, combo_productos, recurrencia |
+| valor              | DECIMAL(8,2) | Valor del descuento o precio fijo                                            |
+| dias_aplicables    | JSON         | Array de días ["lunes", "martes"]                                            |
+| horarios           | JSON         | Array de rangos [{"inicio": "06:00", "fin": "12:00"}]                        |
+| fecha_inicio       | DATE         | Inicio de vigencia                                                           |
+| fecha_fin          | DATE         | Fin de vigencia                                                              |
+| cupos_maximos      | INT          | Máximo de usos por día                                                       |
+| cupos_por_usuario  | INT          | Máximo de usos por usuario                                                   |
+| activa             | BOOLEAN      | Si está activa                                                               |
+| canchas_aplicables | JSON         | Array de venue_ids                                                           |
+| created_at         | TIMESTAMP    | Fecha de creación                                                            |
 
 #### 6.2.4 slot_templates
 
 Plantillas de horarios reutilizables.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues |
-| nombre | VARCHAR(100) | Nombre de la plantilla |
-| descripcion | TEXT | Descripción opcional |
-| config_horarios | JSON | Configuración de horarios |
-| config_precios | JSON | Configuración de precios |
-| is_active | BOOLEAN | Si está activa |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo           | Tipo         | Descripción               |
+| --------------- | ------------ | ------------------------- |
+| id              | UUID         | Identificador único       |
+| venue_id        | UUID         | FK a venues               |
+| nombre          | VARCHAR(100) | Nombre de la plantilla    |
+| descripcion     | TEXT         | Descripción opcional      |
+| config_horarios | JSON         | Configuración de horarios |
+| config_precios  | JSON         | Configuración de precios  |
+| is_active       | BOOLEAN      | Si está activa            |
+| created_at      | TIMESTAMP    | Fecha de creación         |
 
 #### 6.2.5 inventory_items
 
 Catálogo de productos y servicios.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues |
-| nombre | VARCHAR(100) | Nombre del producto |
-| categoria | ENUM | bebida, snack, deportivo, alquiler, servicio |
-| precio | DECIMAL(8,2) | Precio de venta |
-| costo | DECIMAL(8,2) | Costo del producto |
-| control_stock | BOOLEAN | Si tiene control de inventario |
-| stock_actual | INT | Cantidad actual en stock |
-| stock_minimo | INT | Alerta de stock bajo |
-| activo | BOOLEAN | Si está disponible |
-| imagen_url | VARCHAR | URL de la imagen |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo         | Tipo         | Descripción                                  |
+| ------------- | ------------ | -------------------------------------------- |
+| id            | UUID         | Identificador único                          |
+| venue_id      | UUID         | FK a venues                                  |
+| nombre        | VARCHAR(100) | Nombre del producto                          |
+| categoria     | ENUM         | bebida, snack, deportivo, alquiler, servicio |
+| precio        | DECIMAL(8,2) | Precio de venta                              |
+| costo         | DECIMAL(8,2) | Costo del producto                           |
+| control_stock | BOOLEAN      | Si tiene control de inventario               |
+| stock_actual  | INT          | Cantidad actual en stock                     |
+| stock_minimo  | INT          | Alerta de stock bajo                         |
+| activo        | BOOLEAN      | Si está disponible                           |
+| imagen_url    | VARCHAR      | URL de la imagen                             |
+| created_at    | TIMESTAMP    | Fecha de creación                            |
 
 #### 6.2.6 sales
 
 Registro de ventas extras.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| venue_id | UUID | FK a venues |
-| reservation_id | UUID | FK a reservations (opcional) |
-| cliente_nombre | VARCHAR(100) | Nombre del cliente |
-| cliente_telefono | VARCHAR(20) | Teléfono del cliente |
-| productos | JSON | Array de productos vendidos |
-| total | DECIMAL(8,2) | Monto total |
-| metodo_pago | ENUM | efectivo, tarjeta, yape, plin |
-| fecha | DATETIME | Fecha y hora de la venta |
-| vendedor_id | UUID | FK a users |
-| created_at | TIMESTAMP | Fecha de creación |
+| Campo            | Tipo         | Descripción                   |
+| ---------------- | ------------ | ----------------------------- |
+| id               | UUID         | Identificador único           |
+| venue_id         | UUID         | FK a venues                   |
+| reservation_id   | UUID         | FK a reservations (opcional)  |
+| cliente_nombre   | VARCHAR(100) | Nombre del cliente            |
+| cliente_telefono | VARCHAR(20)  | Teléfono del cliente          |
+| productos        | JSON         | Array de productos vendidos   |
+| total            | DECIMAL(8,2) | Monto total                   |
+| metodo_pago      | ENUM         | efectivo, tarjeta, yape, plin |
+| fecha            | DATETIME     | Fecha y hora de la venta      |
+| vendedor_id      | UUID         | FK a users                    |
+| created_at       | TIMESTAMP    | Fecha de creación             |
 
 #### 6.2.7 promotion_usage
 
 Uso de promociones por reserva.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | UUID | Identificador único |
-| promotion_id | UUID | FK a promotions |
-| reservation_id | UUID | FK a reservations |
-| user_id | UUID | FK a users (opcional) |
-| descuento_aplicado | DECIMAL(8,2) | Monto descontado |
-| created_at | TIMESTAMP | Fecha de uso |
+| Campo              | Tipo         | Descripción           |
+| ------------------ | ------------ | --------------------- |
+| id                 | UUID         | Identificador único   |
+| promotion_id       | UUID         | FK a promotions       |
+| reservation_id     | UUID         | FK a reservations     |
+| user_id            | UUID         | FK a users (opcional) |
+| descuento_aplicado | DECIMAL(8,2) | Monto descontado      |
+| created_at         | TIMESTAMP    | Fecha de uso          |
+
+#### 6.2.8 owner_applications (NUEVA)
+
+Solicitudes de owners pendientes de aprobación.
+
+| Campo             | Tipo         | Descripción                   |
+| ----------------- | ------------ | ----------------------------- |
+| id                | UUID         | Identificador único           |
+| user_id           | UUID         | FK a users                    |
+| nombre_negocio    | VARCHAR(100) | Nombre comercial del complejo |
+| ruc               | VARCHAR(11)  | RUC del negocio               |
+| telefono_negocio  | VARCHAR(20)  | Teléfono de contacto          |
+| direccion_negocio | TEXT         | Dirección del local           |
+| ciudad            | VARCHAR(50)  | Ciudad donde opera            |
+| estado            | ENUM         | pending, approved, rejected   |
+| reviewed_by       | UUID         | FK a users (admin que revisó) |
+| reviewed_at       | TIMESTAMP    | Fecha de revisión             |
+| rejection_reason  | TEXT         | Razón del rechazo (si aplica) |
+| created_at        | TIMESTAMP    | Fecha de solicitud            |
+
+#### 6.2.9 venue_approval_history (NUEVA)
+
+Historial de aprobación/rechazo de canchas.
+
+| Campo           | Tipo      | Descripción                          |
+| --------------- | --------- | ------------------------------------ |
+| id              | UUID      | Identificador único                  |
+| venue_id        | UUID      | FK a venues                          |
+| admin_id        | UUID      | FK a users (admin que actuó)         |
+| action          | ENUM      | approve, reject, reactivate, suspend |
+| previous_status | ENUM      | Estado anterior                      |
+| new_status      | ENUM      | Estado nuevo                         |
+| reason          | TEXT      | Documentación de la acción           |
+| created_at      | TIMESTAMP | Fecha de la acción                   |
+
+#### 6.2.10 admin_action_logs (NUEVA)
+
+Log de todas las acciones de administradores.
+
+| Campo       | Tipo      | Descripción                             |
+| ----------- | --------- | --------------------------------------- |
+| id          | UUID      | Identificador único                     |
+| admin_id    | UUID      | FK a users                              |
+| action      | ENUM      | Tipo de acción (ver tabla de tipos)     |
+| target_type | ENUM      | user, owner, venue, reservation, review |
+| target_id   | UUID      | ID del objeto afectado                  |
+| details     | JSON      | Información adicional de la acción      |
+| reason      | TEXT      | Documentación de la acción              |
+| created_at  | TIMESTAMP | Fecha y hora                            |
+
+**Tipos de acciones loggeadas:**
+
+| Acción             | Descripción                     |
+| ------------------ | ------------------------------- |
+| user_suspend       | Usuario suspendido              |
+| user_unsuspend     | Usuario desbloqueado            |
+| user_role_change   | Cambio de rol                   |
+| owner_approve      | Owner aprobado                  |
+| owner_reject       | Owner rechazado                 |
+| owner_suspend      | Owner suspendido                |
+| venue_approve      | Cancha aprobada                 |
+| venue_reject       | Cancha rechazada                |
+| venue_edit         | Cancha editada (override)       |
+| reservation_cancel | Reserva cancelada               |
+| reservation_refund | Reembolso forzado               |
+| review_edit        | Reseña editada                  |
+| review_delete      | Reseña eliminada                |
+| config_change      | Configuración global modificada |
+
+#### 6.2.11 content_reports (NUEVA)
+
+Reportes de contenido por usuarios.
+
+| Campo        | Tipo      | Descripción                             |
+| ------------ | --------- | --------------------------------------- |
+| id           | UUID      | Identificador único                     |
+| reporter_id  | UUID      | FK a users (usuario que reportó)        |
+| content_type | ENUM      | review, photo, user, response           |
+| content_id   | UUID      | ID del contenido reportado              |
+| category     | ENUM      | spam, offensive, false_info, harassment |
+| description  | TEXT      | Detalle del reporte                     |
+| status       | ENUM      | pending, reviewed, resolved             |
+| reviewed_by  | UUID      | FK a users (admin que revisó)           |
+| reviewed_at  | TIMESTAMP | Fecha de revisión                       |
+| action_taken | ENUM      | maintain, edit, delete, warn, ban       |
+| created_at   | TIMESTAMP | Fecha del reporte                       |
+
+#### 6.2.12 platform_config (NUEVA)
+
+Configuración global de la plataforma.
+
+| Campo       | Tipo         | Descripción                     |
+| ----------- | ------------ | ------------------------------- |
+| id          | UUID         | Identificador único             |
+| key         | VARCHAR(100) | Nombre del parámetro            |
+| value       | JSON         | Valor del parámetro             |
+| description | TEXT         | Descripción del parámetro       |
+| updated_by  | UUID         | FK a users (admin que modificó) |
+| updated_at  | TIMESTAMP    | Fecha de última modificación    |
+
+**Parámetros configurables:**
+
+| Key                  | Tipo Valor | Descripción                     |
+| -------------------- | ---------- | ------------------------------- |
+| cities               | JSON Array | Ciudades disponibles            |
+| sports_types         | JSON Array | Tipos de deporte                |
+| surfaces             | JSON Array | Tipos de superficie             |
+| services             | JSON Array | Servicios disponibles           |
+| product_categories   | JSON Array | Categorías de productos         |
+| payment_methods      | JSON Array | Métodos de pago                 |
+| global_commission    | Decimal    | % de comisión global            |
+| commission_free_days | Integer    | Días sin comisión (promocional) |
+| default_tolerance    | Integer    | Minutos tolerancia default      |
+| default_cancel_hours | Integer    | Horas cancelación default       |
+| maintenance_mode     | Boolean    | Platform en mantenimiento       |
+| app_enabled          | Boolean    | App móvil activa                |
+| payments_enabled     | Boolean    | Pagos en línea activos          |
+
+#### 6.2.13 platform_integrations (NUEVA)
+
+Configuración de integraciones externas.
+
+| Campo            | Tipo         | Descripción                          |
+| ---------------- | ------------ | ------------------------------------ |
+| id               | UUID         | Identificador único                  |
+| integration_name | VARCHAR(50)  | Nombre (culqi, cloudinary, sendgrid) |
+| api_key          | VARCHAR(255) | API key (encrypted)                  |
+| api_secret       | VARCHAR(255) | API secret (encrypted)               |
+| webhook_secret   | VARCHAR(255) | Webhook secret (encrypted)           |
+| is_active        | BOOLEAN      | Si está activa                       |
+| config_json      | JSON         | Configuración adicional              |
+| updated_by       | UUID         | FK a users                           |
+| updated_at       | TIMESTAMP    | Fecha de última modificación         |
+
+#### 6.2.14 feature_flags (NUEVA)
+
+Feature flags para control de funcionalidades.
+
+| Campo         | Tipo        | Descripción                  |
+| ------------- | ----------- | ---------------------------- |
+| id            | UUID        | Identificador único          |
+| flag_name     | VARCHAR(50) | Nombre del flag              |
+| is_enabled    | BOOLEAN     | Si está activo               |
+| description   | TEXT        | Descripción del flag         |
+| affected_role | ENUM        | all, user, owner, admin      |
+| updated_by    | UUID        | FK a users                   |
+| updated_at    | TIMESTAMP   | Fecha de última modificación |
 
 ### 6.3 Modificaciones a Tablas Existentes
 
 #### 6.3.1 reservations (campos nuevos)
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| source | ENUM | manual, app |
-| cliente_nombre | VARCHAR(100) | Nombre del cliente (reserva manual) |
-| cliente_telefono | VARCHAR(20) | Teléfono (reserva manual) |
-| cliente_email | VARCHAR(100) | Email (reserva manual) |
-| adelanto_pagado | DECIMAL(8,2) | Monto de adelanto |
-| saldo_pendiente | DECIMAL(8,2) | Saldo restante |
-| estado_pago | ENUM | pending, partial, completed, refunded |
-| promotion_id | UUID | FK a promotions (si aplica) |
-| observaciones | TEXT | Notas del dueño |
+| Campo            | Tipo         | Descripción                                           |
+| ---------------- | ------------ | ----------------------------------------------------- |
+| source           | ENUM         | Origen de la reserva (ver tabla abajo)                |
+| cliente_nombre   | VARCHAR(100) | Nombre del cliente (para reserva manual)              |
+| cliente_telefono | VARCHAR(20)  | Teléfono (para reserva manual)                        |
+| cliente_email    | VARCHAR(100) | Email (para reserva manual)                           |
+| adelanto_pagado  | DECIMAL(8,2) | Monto de adelanto pagado                              |
+| saldo_pendiente  | DECIMAL(8,2) | Saldo restante a pagar en cancha                      |
+| estado_pago      | ENUM         | pending, partial, completed, refunded, partial_refund |
+| promotion_id     | UUID         | FK a promotions (si aplica promoción)                 |
+| observaciones    | TEXT         | Notas del dueño/admin                                 |
 
-#### 6.3.2 payments (campos nuevos)
+**Valores de `source` (Origen de Reserva):**
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| tipo_pago | ENUM | adelanto, saldo, completo |
-| metodo_pago | ENUM | culqi, efectivo, tarjeta_local, yape, plin |
-| registrado_por | UUID | FK a users |
+| Valor      | Descripción                                   |
+| ---------- | --------------------------------------------- |
+| app_mobile | Reserva desde aplicación móvil de jugador     |
+| web_owner  | Reserva creada por owner en Web Dashboard     |
+| web_admin  | Reserva creada por admin (override especial)  |
+| phone_call | Reserva manual por llamada telefónica         |
+| walk_in    | Reserva manual por cliente que llegó al local |
+
+#### 6.3.2 payments (estructura completa)
+
+| Campo          | Tipo         | Descripción                                |
+| -------------- | ------------ | ------------------------------------------ |
+| id             | UUID         | Identificador único                        |
+| reservation_id | UUID         | FK a reservations                          |
+| amount         | DECIMAL(8,2) | Monto pagado                               |
+| currency       | VARCHAR(3)   | Moneda (PEN, USD)                          |
+| status         | ENUM         | pending, completed, failed, refunded       |
+| culqi_id       | VARCHAR      | ID de transacción en Culqi (si aplica)     |
+| tipo_pago      | ENUM         | adelanto, saldo, completo                  |
+| metodo_pago    | ENUM         | culqi, efectivo, tarjeta_local, yape, plin |
+| registrado_por | UUID         | FK a users (who registered the payment)    |
+| created_at     | TIMESTAMP    | Fecha y hora del pago                      |
+
+**Nota:** El campo `status` en payments es el estado de la transacción (si se completó el pago), mientras que `estado_pago` en reservations es el estado general del pago de la reserva (ver sección 4.4.3).
 
 ### 6.4 Detalle de Tablas (Original)
 
@@ -1582,6 +2524,524 @@ Ver archivo separado: `database/schema.sql`
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+### 7.8 Flujo de Administración (Super-Admin)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      ADMIN DASHBOARD                            │
+├─────────────────────────────────────────────────────────────────┤
+│  Login → Dashboard Principal                                   │
+│         │                                                       │
+│         ├── KPIs del día                                        │
+│         │   ├── Usuarios totales                               │
+│         │   ├── Reservas hoy                                    │
+│         │   ├── Ingresos hoy                                    │
+│         │   ├── Comisiones hoy                                  │
+│         │   └── Alertas pendientes                              │
+│         │                                                       │
+│         ├── Gestión de Usuarios                                 │
+│         │       ├── Listado de usuarios                         │
+│         │       ├── Buscar/Filtrar                              │
+│         │       ├── Ver detalle                                 │
+│         │       ├── Suspender/Activar                           │
+│         │       └── Cambiar rol                                 │
+│         │                                                       │
+│         ├── Gestión de Owners                                   │
+│         │       ├── Solicitudes pendientes                      │
+│         │       │       ├── Ver información                     │
+│         │       │       ├── Aprobar                             │
+│         │       │       └── Rechazar (con razón)                │
+│         │       ├── Owners activos                              │
+│         │       │       ├── Ver canchas                         │
+│         │       │       ├── Ver ingresos                        │
+│         │       │       ├── Suspender                           │
+│         │       │       └── Ver configuraciones                 │
+│         │                                                       │
+│         ├── Gestión de Canchas                                  │
+│         │       ├── Listado general                             │
+│         │       ├── Filtros (ciudad, estado, owner)             │
+│         │       ├── Canchas en revisión                         │
+│         │       │       ├── Ver detalle                         │
+│         │       │       ├── Aprobar                             │
+│         │       │       └── Rechazar                            │
+│         │       ├── Canchas activas                             │
+│         │       │       ├── Ver configuración                   │
+│         │       │       ├── Override (editar)                   │
+│         │       │       └── Desactivar                          │
+│         │       └── Canchas inactivas/suspendidas               │
+│         │                                                       │
+│         ├── Gestión de Reservas                                 │
+│         │       ├── Listado general                             │
+│         │       ├── Filtros avanzados                           │
+│         │       ├── Ver detalle                                 │
+│         │       ├── Cancelar (override)                         │
+│         │       ├── Forzar reembolso                            │
+│         │       └── Ver disputes                                │
+│         │                                                       │
+│         ├── Gestión Financiera                                  │
+│         │       ├── Ingresos globales                           │
+│         │       ├── Reportes por período                        │
+│         │       ├── Comisiones                                  │
+│         │       │       ├── Configurar %                        │
+│         │       │       ├── Historial                           │
+│         │       │       └── Por owner/cancha                    │
+│         │       ├── Pagos Culqi                                 │
+│         │       ├── Reembolsos                                  │
+│         │       └── Exportar reportes                           │
+│         │                                                       │
+│         ├── Moderación                                          │
+│         │       ├── Reseñas                                     │
+│         │       │       ├── Listado                             │
+│         │       │       ├── Reportes pendientes                 │
+│         │       │       ├── Ver detalle                         │
+│         │       │       ├── Editar/Eliminar                     │
+│         │       │       └── Resolver reporte                    │
+│         │       ├── Fotos                                       │
+│         │       │       ├── Ver/Auditar                         │
+│         │       │       └── Eliminar                            │
+│         │       └── Conexiones                                  │
+│         │                                                       │
+│         ├── Configuración Global                                │
+│         │       ├── Parámetros                                  │
+│         │       │       ├── Ciudades                            │
+│         │       │       ├── Tipos deporte                       │
+│         │       │       ├── Tipos superficie                    │
+│         │       │       ├── Servicios                           │
+│         │       │       ├── Categorías productos                │
+│         │       │       └── Métodos pago                        │
+│         │       ├── Integraciones                               │
+│         │       │       ├── Culqi keys                          │
+│         │       │       ├── Cloudinary                          │
+│         │       │       ├── SendGrid                            │
+│         │       │       └── Google OAuth                        │
+│         │       ├── Feature flags                               │
+│         │       └── Maintenance mode                            │
+│         │                                                       │
+│         ├── Auditoría                                           │
+│         │       ├── Logs de acciones                            │
+│         │       ├── Logs de reservas                            │
+│         │       ├── Logs de pagos                               │
+│         │       ├── Logs de accesos                             │
+│         │       └── Exportar logs                               │
+│         │                                                       │
+│         └── Reportes                                            │
+│                 ├── Dashboard analytics                         │
+│                 ├── Por período                                 │
+│                 ├── Por cancha                                  │
+│                 ├── Por owner                                   │
+│                 ├── Por ciudad                                  │
+│                 ├── Comparativas                                │
+│                 └── Exportar                                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 7.9 Flujo de Solicitud y Aprobación de Owner
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│              SOLICITAR SER OWNER (Paso 0 - UI Usuario)          │
+├─────────────────────────────────────────────────────────────────┤
+│  1. Usuario logueado (rol: user)                                │
+│         │                                                       │
+│         ▼                                                       │
+│  2. Accede a Configuración → "Solicitar ser Owner"             │
+│         │                                                       │
+│         ▼                                                       │
+│  3. Sistema muestra formulario de solicitud                    │
+│         │                                                       │
+│         ├── Información personal (ya registrada)               │
+│         │   └── Nombre, Email, Teléfono                        │
+│         │                                                       │
+│         ├── Información del negocio (OBLIGATORIO)              │
+│         │   ├── Nombre del complejo/deportivo                  │
+│         │   ├── RUC (11 dígitos, validación SUNAT)             │
+│         │   ├── Teléfono del negocio                           │
+│         │   ├── Dirección del local                            │
+│         │   └── Ciudad donde opera                             │
+│         │                                                       │
+│         └── Documentos opcionales                              │
+│         │   ├── Foto del local                                 │
+│         │   └── Documento de propiedad/arrendamiento           │
+│         │                                                       │
+│         ▼                                                       │
+│  4. Usuario acepta términos y condiciones                      │
+│         │                                                       │
+│         ▼                                                       │
+│  5. Usuario envía solicitud                                    │
+│         │                                                       │
+│         ▼                                                       │
+│  6. Sistema crea registro en `owner_applications`              │
+│         │   ├── estado: pending                                │
+│         │   ├── user_id: (usuario solicitante)                 │
+│         │   └── created_at: (timestamp)                        │
+│         │                                                       │
+│         ▼                                                       │
+│  7. Sistema notifica al admin                                  │
+│         │                                                       │
+│         ▼                                                       │
+│  8. Usuario ve estado "Solicitud pendiente"                    │
+│         │   ├── Puede seguir usando la app como user           │
+│         │   └── Puede cancelar solicitud antes de aprobación   │
+│         │                                                       │
+│         ▼                                                       │
+│  ─────────────────────────────────────────────────────────────  │
+│         │                                                       │
+│         ▼                                                       │
+│  CONTINÚA EN FLUJO DE APROBACIÓN ADMIN (abajo)                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                   APROBACIÓN DE OWNER (Admin)                   │
+├─────────────────────────────────────────────────────────────────┤
+│  1. Admin recibe notificación de nueva solicitud               │
+│         │                                                       │
+│         ▼                                                       │
+│  2. Admin accede a Owners → Solicitudes Pendientes             │
+│         │                                                       │
+│         ▼                                                       │
+│  3. Admin revisa información del solicitante                    │
+│         ├── Nombre                                              │
+│         ├── Email                                               │
+│         ├── Teléfono                                            │
+│         ├── Nombre negocio                                      │
+│         ├── RUC                                                 │
+│         ├── Dirección                                           │
+│         └── Ciudad                                              │
+│         │                                                       │
+│         ▼                                                       │
+│  5. Admin decide                                                │
+│         │                                                       │
+│         ├── Aprobar                                             │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   6. Rol cambia a "owner"                             │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   7. Owner puede crear canchas                        │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   8. Sistema notifica al usuario                      │
+│         │                                                       │
+│         └── Rechazar                                            │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   6. Admin documenta razón                            │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   7. Usuario permanece como "user"                    │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   8. Sistema notifica al usuario                      │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   9. Usuario puede re-aplicar                         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 7.10 Flujo de Aprobación de Cancha
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                   APROBACIÓN DE CANCHA                         │
+├─────────────────────────────────────────────────────────────────┤
+│  1. Owner crea cancha                                           │
+│         │                                                       │
+│         ▼                                                       │
+│  2. Estado: "en_revision"                                       │
+│         │                                                       │
+│         ▼                                                       │
+│  3. Admin recibe notificación                                   │
+│         │                                                       │
+│         ▼                                                       │
+│  4. Admin accede a canchas en revisión                          │
+│         │                                                       │
+│         ▼                                                       │
+│  5. Admin revisa información                                    │
+│         ├── Datos básicos                                       │
+│         │   └── Nombre, dirección, ciudad                       │
+│         ├── Coordenadas GPS                                     │
+│         ├── Fotos (mínimo 3)                                    │
+│         ├── Tipo deporte                                        │
+│         ├── Superficie                                          │
+│         ├── Servicios                                           │
+│         ├── Horarios configurados                               │
+│         ├── Precios definidos                                   │
+│         └── Políticas (tolerancia, cancelación)                 │
+│         │                                                       │
+│         ▼                                                       │
+│  6. Admin decide                                                │
+│         │                                                       │
+│         ├── Aprobar                                             │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   7. Estado → "activa"                                │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   8. Cancha visible para usuarios                     │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   9. Sistema notifica al owner                        │
+│         │                                                       │
+│         └── Rechazar                                            │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   7. Admin documenta razón                            │
+│         │       ├── "Falta información"                         │
+│         │       ├── "Fotos no válidas"                          │
+│         │       ├── "Coordenadas incorrectas"                   │
+│         │       ├── "Horarios no configurados"                  │
+│         │       └── "Otro"                                      │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   8. Estado → "rechazada"                             │
+│         │       │                                               │
+│         │       ▼                                               │
+│         │   9. Owner puede editar y reenviar                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 7.11 Flujo de Moderación de Reseña
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                   MODERACIÓN DE Reseña                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Escenario A: Usuario reporta reseña                           │
+│  ─────────────────────────────────────────────────────────────  │
+│  1. Usuario reporta reseña                                      │
+│         │                                                       │
+│         ▼                                                       │
+│  2. Admin recibe alerta                                         │
+│         │                                                       │
+│         ▼                                                       │
+│  3. Admin accede a reportes pendientes                          │
+│         │                                                       │
+│         ▼                                                       │
+│  4. Admin revisa reporte                                        │
+│         ├── Reseña original                                     │
+│         ├── Fotos (si tiene)                                    │
+│         ├── Razón del reporte                                   │
+│         └── Usuario que reportó                                 │
+│         │                                                       │
+│         ▼                                                       │
+│  5. Admin decide                                                │
+│         │                                                       │
+│         ├── Mantener                                            │
+│         │       └── Reseña no viola políticas                   │
+│         │                                                       │
+│         ├── Editar                                              │
+│         │       ├── Modificar contenido                        │
+│         │       └── Eliminar foto                              │
+│         │       └── Guardar versión editada                    │
+│         │                                                       │
+│         └── Eliminar                                            │
+│         │       ├── Documentar razón                           │
+│         │       └── Eliminar reseña                            │
+│         │       └── Notificar usuario                          │
+│         │                                                       │
+│         ▼                                                       │
+│  6. Reporte marcado como "resolved"                             │
+│                                                                 │
+│  Escenario B: Admin proactivamente revisa                      │
+│  ─────────────────────────────────────────────────────────────  │
+│  1. Admin navega listado de reseñas                             │
+│         │                                                       │
+│         ▼                                                       │
+│  2. Admin detecta contenido inappropriate                       │
+│         │                                                       │
+│         ▼                                                       │
+│  3. Admin edita o elimina                                       │
+│         │                                                       │
+│         ▼                                                       │
+│  4. Log de acción registrado                                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 8.1 API Endpoints Specification
+
+### 8.1.1 Autenticación
+
+| Endpoint              | Método | Descripción                   |
+| --------------------- | ------ | ----------------------------- |
+| `/api/auth/register`  | POST   | Registro de nuevo usuario     |
+| `/api/auth/login`     | POST   | Login con email/contraseña    |
+| `/api/auth/google`    | POST   | Login con Google OAuth        |
+| `/api/auth/logout`    | POST   | Logout y invalidar token      |
+| `/api/auth/refresh`   | POST   | Refresh token                 |
+| `/api/auth/reset`     | POST   | Solicitar reset de contraseña |
+| `/api/auth/reset/:id` | POST   | Confirmar nueva contraseña    |
+
+**Headers requeridos:**
+
+```
+Authorization: Bearer <token>
+Content-Type: application/json
+```
+
+### 8.1.2 Usuarios
+
+| Endpoint                | Método | Descripción                    |
+| ----------------------- | ------ | ------------------------------ |
+| `/api/users`            | GET    | Listar usuarios (admin only)   |
+| `/api/users/:id`        | GET    | Detalle de usuario             |
+| `/api/users/:id`        | PATCH  | Actualizar usuario             |
+| `/api/users/:id/role`   | PATCH  | Cambiar rol (admin only)       |
+| `/api/users/:id/status` | PATCH  | Suspender/activar (admin only) |
+| `/api/users/me`         | GET    | Usuario actual                 |
+
+### 8.1.3 Owners y Solicitudes
+
+| Endpoint                      | Método | Descripción                      |
+| ----------------------------- | ------ | -------------------------------- |
+| `/api/owner-applications`     | GET    | Listar solicitudes (admin only)  |
+| `/api/owner-applications`     | POST   | Crear solicitud                  |
+| `/api/owner-applications/:id` | PATCH  | Aprobar/rechazar (admin only)    |
+| `/api/owners`                 | GET    | Listar owners activos            |
+| `/api/owners/:id`             | GET    | Detalle de owner                 |
+| `/api/owners/:id/status`      | PATCH  | Suspender/reactivar (admin only) |
+| `/api/owners/:id/venues`      | GET    | Canchas del owner                |
+| `/api/owners/:id/revenue`     | GET    | Ingresos del owner               |
+
+### 8.1.4 Canchas (Venues)
+
+| Endpoint                       | Método | Descripción                 |
+| ------------------------------ | ------ | --------------------------- |
+| `/api/venues`                  | GET    | Listar canchas              |
+| `/api/venues`                  | POST   | Crear cancha (owner only)   |
+| `/api/venues/:id`              | GET    | Detalle de cancha           |
+| `/api/venues/:id`              | PATCH  | Actualizar cancha           |
+| `/api/venues/:id/status`       | PATCH  | Cambiar estado (admin only) |
+| `/api/venues/:id/schedule`     | GET    | Horarios de la cancha       |
+| `/api/venues/:id/schedule`     | PATCH  | Configurar horarios         |
+| `/api/venues/:id/prices`       | GET    | Precios por slot            |
+| `/api/venues/:id/prices`       | PATCH  | Configurar precios          |
+| `/api/venues/:id/blocking`     | POST   | Crear bloqueo de horario    |
+| `/api/venues/:id/blocking`     | GET    | Listar bloqueos             |
+| `/api/venues/:id/policies`     | GET    | Políticas de la cancha      |
+| `/api/venues/:id/policies`     | PATCH  | Configurar políticas        |
+| `/api/venues/:id/promotions`   | GET    | Promociones activas         |
+| `/api/venues/:id/promotions`   | POST   | Crear promoción             |
+| `/api/venues/:id/inventory`    | GET    | Inventario                  |
+| `/api/venues/:id/inventory`    | POST   | Agregar producto            |
+| `/api/venues/:id/availability` | GET    | Disponibilidad por fecha    |
+
+### 8.1.5 Reservas
+
+| Endpoint                          | Método | Descripción                  |
+| --------------------------------- | ------ | ---------------------------- |
+| `/api/reservations`               | GET    | Listar reservas              |
+| `/api/reservations`               | POST   | Crear reserva                |
+| `/api/reservations/:id`           | GET    | Detalle de reserva           |
+| `/api/reservations/:id`           | PATCH  | Actualizar reserva           |
+| `/api/reservations/:id/cancel`    | POST   | Cancelar reserva             |
+| `/api/reservations/:id/refund`    | POST   | Solicitar reembolso (admin)  |
+| `/api/reservations/:id/check-in`  | POST   | Marcar llegada               |
+| `/api/reservations/:id/pay-saldo` | POST   | Registrar pago saldo (owner) |
+
+### 8.1.6 Pagos
+
+| Endpoint                | Método | Descripción           |
+| ----------------------- | ------ | --------------------- |
+| `/api/payments`         | POST   | Procesar pago (Culqi) |
+| `/api/payments/:id`     | GET    | Detalle de pago       |
+| `/api/payments/:id`     | PATCH  | Actualizar estado     |
+| `/api/payments/webhook` | POST   | Webhook Culqi         |
+
+### 8.1.7 Reseñas
+
+| Endpoint                   | Método | Descripción                  |
+| -------------------------- | ------ | ---------------------------- |
+| `/api/reviews`             | GET    | Listar reseñas               |
+| `/api/reviews`             | POST   | Crear reseña                 |
+| `/api/reviews/:id`         | GET    | Detalle de reseña            |
+| `/api/reviews/:id`         | PATCH  | Editar reseña                |
+| `/api/reviews/:id`         | DELETE | Eliminar reseña (admin only) |
+| `/api/reviews/:id/respond` | POST   | Responder (owner only)       |
+| `/api/reviews/:id/report`  | POST   | Reportar reseña              |
+
+### 8.1.8 Moderación (Admin)
+
+| Endpoint                 | Método | Descripción          |
+| ------------------------ | ------ | -------------------- |
+| `/api/admin/reports`     | GET    | Listar reportes      |
+| `/api/admin/reports/:id` | PATCH  | Resolver reporte     |
+| `/api/admin/reviews`     | GET    | Listar todas reseñas |
+| `/api/admin/reviews/:id` | DELETE | Eliminar reseña      |
+
+### 8.1.9 Finanzas (Admin)
+
+| Endpoint                        | Método | Descripción          |
+| ------------------------------- | ------ | -------------------- |
+| `/api/admin/finance/kpis`       | GET    | KPIs financieros     |
+| `/api/admin/finance/revenue`    | GET    | Ingresos por período |
+| `/api/admin/finance/commission` | GET    | Reporte comisiones   |
+| `/api/admin/finance/commission` | PATCH  | Configurar comisión  |
+| `/api/admin/finance/export`     | GET    | Exportar reportes    |
+
+### 8.1.10 Configuración (Admin)
+
+| Endpoint                       | Método | Descripción              |
+| ------------------------------ | ------ | ------------------------ |
+| `/api/admin/config`            | GET    | Configuración global     |
+| `/api/admin/config`            | PATCH  | Actualizar configuración |
+| `/api/admin/integrations`      | GET    | Integraciones            |
+| `/api/admin/integrations/:id`  | PATCH  | Configurar integración   |
+| `/api/admin/feature-flags`     | GET    | Feature flags            |
+| `/api/admin/feature-flags/:id` | PATCH  | Toggle feature flag      |
+| `/api/admin/maintenance`       | POST   | Activar maintenance mode |
+
+### 8.1.11 Auditoría (Admin)
+
+| Endpoint                       | Método | Descripción    |
+| ------------------------------ | ------ | -------------- |
+| `/api/admin/audit-logs`        | GET    | Listar logs    |
+| `/api/admin/audit-logs/:id`    | GET    | Detalle de log |
+| `/api/admin/audit-logs/export` | GET    | Exportar logs  |
+
+### 8.1.12 Response Format
+
+**Success Response:**
+
+```json
+{
+  "success": true,
+  "data": { ... },
+  "meta": {
+    "page": 1,
+    "total": 100,
+    "perPage": 20
+  }
+}
+```
+
+**Error Response:**
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "El email no es válido",
+    "details": { ... }
+  }
+}
+```
+
+### 8.1.13 Error Codes
+
+| Código             | HTTP Status | Descripción               |
+| ------------------ | ----------- | ------------------------- |
+| `UNAUTHORIZED`     | 401         | Token inválido/expirado   |
+| `FORBIDDEN`        | 403         | No tiene permisos         |
+| `NOT_FOUND`        | 404         | Resource no existe        |
+| `VALIDATION_ERROR` | 400         | Datos inválidos           |
+| `CONFLICT`         | 409         | Conflicto (doble reserva) |
+| `PAYMENT_FAILED`   | 402         | Error en Culqi            |
+| `RATE_LIMIT`       | 429         | Too many requests         |
+
 ---
 
 ## 8. Integraciones
@@ -1612,77 +3072,111 @@ Ver archivo separado: `database/schema.sql`
 
 ## 9. Plan de Implementación
 
-### Fase 1: Web Dashboard para Dueños (Meses 1-3)
+### Fase 0: Admin Dashboard (Meses 1-2) — FUNDACIÓN
 
-#### Mes 1: Fundación Web
+**IMPORTANTE:** Esta fase debe completarse ANTES de habilitar owners, ya que el admin debe poder aprobar/rechazar solicitudes.
 
-| Semana | Backend | Web Dashboard |
-|--------|---------|---------------|
-| 1 | Arquitectura, servidor, DB | Diseño UI/UX |
-| 2 | Users, Roles, Venues | Login, Panel básico |
-| 3 | Schedules, Time Slots, Disponibilidad | Crear/editar cancha, horarios flexibles |
-| 4 | Venue Policies, Bloqueos | Configuración de políticas, bloqueos |
+#### Mes 1: Fundación Admin
 
-**Meta:** Sistema de gestión de canchas funcionando
+| Semana | Backend                               | Admin Dashboard                 |
+| ------ | ------------------------------------- | ------------------------------- |
+| 1      | Arquitectura, servidor, DB            | Diseño UI/UX                    |
+| 2      | Users, Roles, Admin tables            | Login, Dashboard principal      |
+| 3      | Owner applications, approval workflow | Gestión de owners, aprobaciones |
+| 4      | Venue approval, audit logs            | Gestión de canchas, auditoría   |
 
-#### Mes 2: Reservas Manuales e Inventario
+**Meta:** Sistema de aprobaciones funcionando para recibir owners
 
-| Semana | Funcionalidad |
-|--------|---------------|
-| 5 | Sistema de reservas manuales (sin app) |
-| 6 | Sistema de pagos parciales y registro de pagos |
-| 7 | Inventario y ventas extras |
-| 8 | Promociones y ofertas |
+#### Mes 2: Configuración y Moderación Admin
+
+| Semana | Funcionalidad                      |
+| ------ | ---------------------------------- |
+| 5      | Sistema de moderación de reseñas   |
+| 6      | Sistema de reportes de contenido   |
+| 7      | Configuración global de plataforma |
+| 8      | Feature flags y maintenance mode   |
+
+**Meta:** Admin dashboard 100% funcional para supervisión de plataforma
+
+---
+
+### Fase 1: Web Dashboard para Owners (Meses 3-5)
+
+**Prerequisito:** Fase 0 completada (Admin Dashboard operativo)
+
+#### Mes 3: Fundación Web Owner
+
+| Semana | Backend                        | Web Dashboard                           |
+| ------ | ------------------------------ | --------------------------------------- |
+| 9      | Venues, Schedules API          | Diseño UI/UX                            |
+| 10     | Time Slots, Disponibilidad     | Login, Panel básico                     |
+| 11     | Venue Policies, Bloqueos       | Crear/editar cancha, horarios flexibles |
+| 12     | Canchas → estado `en_revision` | Configuración de políticas, bloqueos    |
+
+**Meta:** Owners pueden crear canchas (pendiente aprobación admin)
+
+#### Mes 4: Reservas Manuales e Inventario
+
+| Semana | Funcionalidad                                  |
+| ------ | ---------------------------------------------- |
+| 13     | Sistema de reservas manuales (sin app)         |
+| 14     | Sistema de pagos parciales y registro de pagos |
+| 15     | Inventario y ventas extras                     |
+| 16     | Promociones y ofertas                          |
 
 **Meta:** Dashboard completo para gestión independiente
 
-#### Mes 3: Polishing y Lanzamiento Web
+#### Mes 5: Polishing y Lanzamiento Web
 
-| Semana | Funcionalidad |
-|--------|---------------|
-| 9 | Sistema de tolerancia y políticas |
-| 10 | Reportes y métricas avanzadas |
-| 11 | Bug fixing + optimización |
-| 12 | Lanzamiento web para dueños |
+| Semana | Funcionalidad                     |
+| ------ | --------------------------------- |
+| 17     | Sistema de tolerancia y políticas |
+| 18     | Reportes y métricas avanzadas     |
+| 19     | Bug fixing + optimización         |
+| 20     | Lanzamiento web para dueños       |
 
 **Meta:** Web dashboard 100% funcional e independiente
 
-### Fase 2: App Móvil para Jugadores (Meses 4-6)
+---
 
-#### Mes 4: App Móvil - Fundación
+### Fase 2: App Móvil para Jugadores (Meses 6-8)
 
-| Semana | Backend | App Móvil |
-|--------|---------|-----------|
-| 13 | API endpoints para app | Diseño UI/UX |
-| 14 | Geolocalización, búsqueda | Login, registro |
-| 15 | Integración con horarios flexibles | Mapa, listado canchas |
-| 16 | Sistema de promociones en app | Detalle cancha, selector horario |
+#### Mes 6: App Móvil - Fundación
+
+| Semana | Backend                            | App Móvil                        |
+| ------ | ---------------------------------- | -------------------------------- |
+| 21     | API endpoints para app             | Diseño UI/UX                     |
+| 22     | Geolocalización, búsqueda          | Login, registro                  |
+| 23     | Integración con horarios flexibles | Mapa, listado canchas            |
+| 24     | Sistema de promociones en app      | Detalle cancha, selector horario |
 
 **Meta:** App básica funcionando
 
-#### Mes 5: Pagos y Reservas
+#### Mes 7: Pagos y Reservas
 
-| Semana | Funcionalidad |
-|--------|---------------|
-| 17 | Prevención doble reserva |
-| 18 | Integración Culqi + Webhooks |
-| 19 | Pagos parciales desde app |
-| 20 | Pre-venta de productos |
+| Semana | Funcionalidad                |
+| ------ | ---------------------------- |
+| 25     | Prevención doble reserva     |
+| 26     | Integración Culqi + Webhooks |
+| 27     | Pagos parciales desde app    |
+| 28     | Pre-venta de productos       |
 
 **Meta:** Reserva con pago real desde app
 
-#### Mes 6: Beta y Red Social
+#### Mes 8: Beta y Red Social
 
-| Semana | Funcionalidad |
-|--------|---------------|
-| 21 | Reseñas y calificaciones |
-| 22 | Conexiones entre usuarios |
-| 23 | Testing completo |
-| 24 | Lanzamiento beta |
+| Semana | Funcionalidad             |
+| ------ | ------------------------- |
+| 29     | Reseñas y calificaciones  |
+| 30     | Conexiones entre usuarios |
+| 31     | Testing completo          |
+| 32     | Lanzamiento beta          |
 
 **Meta:** App móvil lista para usuarios
 
-### Fase 3: Funcionalidades Avanzadas (Meses 7+)
+---
+
+### Fase 3: Funcionalidades Avanzadas (Meses 9+)
 
 - Reservas recurrentes (torneos y ligas)
 - Más pasarelas de pago (Yape, Plin)
@@ -1694,80 +3188,257 @@ Ver archivo separado: `database/schema.sql`
 
 ## 10. KPIs de Éxito
 
-### Fase 1 - Web Dashboard
+### Fase 0 - Admin Dashboard
 
-| Indicador | Objetivo |
-|-----------|----------|
-| Dueños registrados | ≥ 20 |
-| Canchas configuradas | ≥ 30 |
-| Reservas manuales creadas | ≥ 100 |
+| Indicador                     | Objetivo      |
+| ----------------------------- | ------------- |
+| Admin dashboard funcional     | 100% features |
+| Sistema de aprobación owners  | Operativo     |
+| Sistema de aprobación canchas | Operativo     |
+| Configuración global          | Operativa     |
+| Logs de auditoría             | 100% acciones |
+
+### Fase 1 - Web Dashboard (Owners)
+
+| Indicador                     | Objetivo        |
+| ----------------------------- | --------------- |
+| Dueños registrados            | ≥ 20            |
+| Canchas configuradas          | ≥ 30            |
+| Reservas manuales creadas     | ≥ 100           |
 | Uso de sistema de promociones | ≥ 50% de dueños |
-| Uso de inventario/ventas | ≥ 70% de dueños |
+| Uso de inventario/ventas      | ≥ 70% de dueños |
 
 ### Fase 2 - App Móvil
 
-| Indicador | Objetivo |
-|-----------|----------|
-| Usuarios registrados | ≥ 500 |
-| Reservas desde app | ≥ 200 |
-| Doble reserva | 0 casos |
-| Pagos confirmados | 100% |
-| Tasa de uso de promociones | ≥ 30% |
+| Indicador                  | Objetivo |
+| -------------------------- | -------- |
+| Usuarios registrados       | ≥ 500    |
+| Reservas desde app         | ≥ 200    |
+| Doble reserva              | 0 casos  |
+| Pagos confirmados          | 100%     |
+| Tasa de uso de promociones | ≥ 30%    |
 
 ### Generales
 
-| Indicador | Objetivo |
-|-----------|----------|
-| Disponibilidad | 99.5% |
-| Tiempo respuesta | < 2 segundos |
-| Satisfacción dueños | ≥ 4/5 |
-| Satisfacción usuarios | ≥ 4/5 |
+| Indicador             | Objetivo     |
+| --------------------- | ------------ |
+| Disponibilidad        | 99.5%        |
+| Tiempo respuesta      | < 2 segundos |
+| Satisfacción dueños   | ≥ 4/5        |
+| Satisfacción usuarios | ≥ 4/5        |
 
 ---
 
 ## 11. Riesgos y Mitigaciones
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|--------|--------------|---------|------------|
-| Dueños no adoptan dashboard | Media | Alto | Onboarding guiado, soporte cercano, reservas manuales fáciles |
-| Configuración horarios muy compleja | Media | Medio | Plantillas predefinidas, asistente de configuración |
-| Retraso en integración Culqi | Media | Alto | Mock de pagos desde inicio |
-| Doble reserva por concurrencia | Baja | Alto | Transacciones atómicas, testing exhaustivo |
-| Geolocalización imprecisa (Fase 2) | Baja | Medio | Fallback a búsqueda manual |
-| Problemas de rendimiento | Baja | Alto | Caché Redis, índices adecuados |
-| Inventario difícil de usar | Media | Medio | Interfaz simple, control de stock opcional |
+| Riesgo                              | Probabilidad | Impacto | Mitigación                                                    |
+| ----------------------------------- | ------------ | ------- | ------------------------------------------------------------- |
+| Dueños no adoptan dashboard         | Media        | Alto    | Onboarding guiado, soporte cercano, reservas manuales fáciles |
+| Configuración horarios muy compleja | Media        | Medio   | Plantillas predefinidas, asistente de configuración           |
+| Retraso en integración Culqi        | Media        | Alto    | Mock de pagos desde inicio                                    |
+| Doble reserva por concurrencia      | Baja         | Alto    | Transacciones atómicas, testing exhaustivo                    |
+| Geolocalización imprecisa (Fase 2)  | Baja         | Medio   | Fallback a búsqueda manual                                    |
+| Problemas de rendimiento            | Baja         | Alto    | Caché Redis, índices adecuados                                |
+| Inventario difícil de usar          | Media        | Medio   | Interfaz simple, control de stock opcional                    |
+| Admin panel muy complejo            | Media        | Alto    | Diseño UX intuitivo, roles diferenciados                      |
+| Moderación ineficiente              | Media        | Medio   | Auto-flagging, AI assistance para contenido                   |
+| Comisiones mal configuradas         | Baja         | Alto    | Validación de valores, rollback capability                    |
+| Auditoría logs voluminosa           | Media        | Medio   | Retención configurable, archiving strategy                    |
 
 ---
 
 ## 12. Glosario
 
-| Término | Definición |
-|---------|------------|
-| Owner | Dueño de una o más canchas |
-| Venue | Cancha de fútbol |
-| Reservation | Reserva de un horario específico |
-| Blocking | Bloqueo manual de horario |
-| Time Slot | Franja horaria configurable (ej: 3:00 PM, 3:30 PM) |
-| Review | Reseña/calificación de una cancha |
-| Connection | Conexión entre usuarios (red social) |
-| Culqi | Pasarela de pago peruana |
-| QR Code | Código QR de validación de reserva |
-| Pago parcial | Adelanto mínimo para confirmar reserva |
-| Promoción | Oferta especial para horarios de baja demanda |
-| Inventario | Sistema de productos y servicios extras |
+| Término          | Definición                                         |
+| ---------------- | -------------------------------------------------- |
+| Owner            | Dueño de una o más canchas                         |
+| Venue            | Cancha de fútbol                                   |
+| Reservation      | Reserva de un horario específico                   |
+| Blocking         | Bloqueo manual de horario                          |
+| Time Slot        | Franja horaria configurable (ej: 3:00 PM, 3:30 PM) |
+| Review           | Reseña/calificación de una cancha                  |
+| Connection       | Conexión entre usuarios (red social)               |
+| Culqi            | Pasarela de pago peruana                           |
+| QR Code          | Código QR de validación de reserva                 |
+| Pago parcial     | Adelanto mínimo para confirmar reserva             |
+| Promoción        | Oferta especial para horarios de baja demanda      |
+| Inventario       | Sistema de productos y servicios extras            |
+| Super-Admin      | Administrador de plataforma con acceso completo    |
+| Commission       | Porcentaje cobrado por cada reserva                |
+| Override         | Acción admin que sobrescribe configuración owner   |
+| Audit Log        | Registro de todas las acciones admin               |
+| Feature Flag     | Control de activación/desactivación de features    |
+| Content Report   | Reporte de usuario sobre contenido inappropriate   |
+| Maintenance Mode | Estado donde platform no disponible para usuarios  |
 
 ---
 
 **Documento preparado para desarrollo**  
-*Versión 2.0 - Marzo 2026*
+_Versión 2.2 - Abril 2026_
 
 ---
 
 ## 13. Historial de Cambios
 
+### Versión 2.2 - Abril 2026 (Correcciones y Mejoras)
+
+**Correcciones estructurales:**
+
+- **Reordenación de Fases:** Admin Dashboard ahora es **Fase 0** (fundación), implementado ANTES de Web Dashboard de Owners. Esto corrige la inconsistencia donde owners creaban canchas sin sistema de aprobación admin.
+- **Estados de Reserva y Pago:** Separación clara entre `reservation_status` (estado del evento) y `payment_status` (estado de la transacción). Nueva matriz de estados combinados.
+- **Estados de Cancha:** Agregados estados `rechazada` y `suspendida` en la tabla principal de estados, con flujo de estados visual.
+- **Cálculo de Comisiones:** Corregida formula incorrecta. Ahora: `comisión = precio_total_reserva × porcentaje_comisión` (no multiplicar por horas nuevamente).
+
+**Funcionalidades nuevas especificadas:**
+
+- **Solicitud de Owner Role:** Nuevo flujo 7.9 con paso 0 (UI de solicitud), formulario de información del negocio, y validación RUC.
+- **Marcar Llegada UI:** Sección 4.10.5 con mockups completos para owner: pantallas de reservas del día, modal de llegada, modal de exceso de tolerancia, modal de "no se presentó", validación por QR.
+- **API Endpoints:** Nueva sección 8.1 con 60+ endpoints organizados por módulo, response format, error codes.
+
+**Simplificaciones:**
+
+- **Funcionalidades Admin:** Reducidas de 110 a 71 agrupando toggles (ej: suspender/activar usuario → gestión de estado de usuario). Ver notas en cada sección 2.3.x.
+- **Tabla payments:** Eliminada duplicación de definición, unificada en sección 6.3.2.
+- **Source de reservas:** Mejor naming: `app_mobile`, `web_owner`, `web_admin`, `phone_call`, `walk_in` (antes solo `manual` vs `app`).
+
+### Versión 2.1 - Abril 2026
+
+**Expansión completa del Sistema de Administración:**
+
+Esta versión expande significativamente las funcionalidades para Super-Admins, derivadas de los requerimientos de Owners y Jugadores.
+
+**Nuevas funcionalidades para Administradores (110 total):**
+
+**Gestión de Usuarios y Roles (AU01-AU08):**
+
+- Listado de todos los usuarios (jugadores y owners)
+- Detalle de usuario individual con historial
+- Cambio de roles (asignar/quitar owner o admin)
+- Suspender/bloquear usuarios
+- Desbloquear usuarios
+- Gestión de usuarios con Google OAuth
+- Resetear contraseña (admin override)
+
+**Gestión de Dueños (AO01-AO13):**
+
+- Listado de solicitudes pendientes
+- Aprobar/rechazar nuevos owners
+- Listado de owners activos
+- Detalle de owner (canchas, ingresos, configuraciones)
+- Suspender/reactivar owners
+- Ver canchas asociadas
+- Ver configuraciones del owner
+- Ver ingresos y comisiones
+- Contactar owner
+- Historial de actividad
+
+**Gestión de Canchas (AV01-AV16):**
+
+- Listado de todas las canchas del sistema
+- Aprobar/rechazar canchas nuevas
+- Desactivar/activar canchas (override)
+- Ver horarios, precios, bloqueos
+- Ver políticas, promociones, inventario
+- Ver stats de ocupación
+- Editar cancha (override admin)
+- Filtros avanzados
+
+**Gestión de Reservas (AR01-AR12):**
+
+- Listado de todas las reservas (cross-venue)
+- Filtros avanzados
+- Detalle de reserva individual
+- Ver estado de pago, extras, promociones
+- Ver origen (manual vs app)
+- Cancelar reserva (override)
+- Forzar reembolso
+- Ver disputes/reclamos
+
+**Gestión Financiera (AF01-AF14):**
+
+- Panel de ingresos globales
+- Ingresos por período, cancha, owner, ciudad
+- Gestión de comisiones (% global)
+- Historial de comisiones
+- Reporte de pagos Culqi
+- Reporte de reembolsos
+- Ventas extras globales
+- Exportar reportes financieros
+
+**Moderación y Contenido (AM01-AM12):**
+
+- Listado de todas las reseñas
+- Moderar/editar reseñas
+- Eliminar reseñas y fotos
+- Ver respuestas de owners
+- Listado de reportes de contenido
+- Resolver reportes
+- Ver conexiones entre usuarios
+- Moderar conexiones
+
+**Configuración Global (AC01-AC15):**
+
+- Configurar ciudades, deportes, superficies
+- Configurar servicios y categorías
+- Configurar métodos de pago
+- Templates de notificaciones
+- Configurar integraciones (API keys)
+- Maintenance mode
+- Feature flags
+
+**Reportes y Analytics (RP01-RP14):**
+
+- Dashboard principal con KPIs
+- Reportes por cancha, owner, ciudad, período
+- Reportes de usuarios, ocupación, promociones
+- Reportes de cancelaciones
+- Comparativas
+- Exportar reportes
+
+**Notificaciones Admin (AN01-AN08):**
+
+- Alerta de solicitudes de owners
+- Alerta de canchas en revisión
+- Alerta de reseñas reportadas
+- Alerta de disputes/reclamos
+- Alerta de errores Culqi
+
+**Auditoría y Logs (AL01-AL08):**
+
+- Log de acciones admin
+- Log de cambios en canchas
+- Log de reservas y pagos
+- Log de accesos
+- Exportar logs
+- Configurar retención
+
+**Nuevas tablas en el modelo de datos:**
+
+- owner_applications: Solicitudes de owners pendientes
+- venue_approval_history: Historial de aprobación de canchas
+- admin_action_logs: Log de todas las acciones admin
+- content_reports: Reportes de contenido por usuarios
+- platform_config: Configuración global de la plataforma
+- platform_integrations: Configuración de integraciones externas
+- feature_flags: Feature flags para control de funcionalidades
+
+**Secciones técnicas agregadas:**
+
+- 4.15: Sistema de Administración (Super-Admins)
+- 7.8: Flujo de Administración
+- 7.9: Flujo de Aprobación de Owner
+- 7.10: Flujo de Aprobación de Cancha
+- 7.11: Flujo de Moderación de Reseña
+
+**Cambios en la estructura del documento:**
+
+- Sección 2.3 expandida con 10 sub-categorías de funcionalidades admin
+- Total de 110 funcionalidades admin vs 6 en versión anterior
+
 ### Versión 2.0 - Marzo 2026
 
 **Nuevas funcionalidades para Dueños de Canchas:**
+
 - D10: Sistema de horarios flexibles con precios por slot de 30 min
 - D11: Configuración de tolerancia para llegada (tiempo de gracia)
 - D12: Sistema de promociones para horarios de baja demanda
@@ -1777,6 +3448,7 @@ Ver archivo separado: `database/schema.sql`
 - D16: Sistema de reservas manuales (independiente de app móvil)
 
 **Nuevas funcionalidades para Jugadores (App Móvil):**
+
 - F13: Visualización de precios diferenciados por slot de horario
 - F14: Descubrir y aplicar promociones/ofertas disponibles
 - F15: Agregar productos extras y servicios a la reserva (pre-venta)
@@ -1785,6 +3457,7 @@ Ver archivo separado: `database/schema.sql`
 - F18: Ver descuentos aplicados en el resumen de reserva
 
 **Cambios estructurales:**
+
 - Reorganización en 3 fases de lanzamiento (Web primero, App después)
 - Sistema web 100% funcional sin app móvil
 - 7 nuevas tablas en el modelo de datos
@@ -1792,6 +3465,7 @@ Ver archivo separado: `database/schema.sql`
 - 13 nuevos tipos de notificaciones push
 
 **Secciones técnicas agregadas:**
+
 - 4.9: Sistema de Horarios y Precios Flexibles
 - 4.10: Sistema de Tolerancia para Llegada
 - 4.11: Sistema de Promociones y Ofertas
@@ -1801,9 +3475,11 @@ Ver archivo separado: `database/schema.sql`
 - 4.8.3: Experiencia de Usuario en App Móvil
 
 **Flujos de usuario agregados:**
+
 - 7.5: Flujo de Descubrimiento de Promociones
 - 7.6: Flujo de Compra de Productos Extras
 - 7.7: Flujo de Pago Parcial
 
 ### Versión 1.0 - Febrero 2026
+
 - Versión inicial del documento

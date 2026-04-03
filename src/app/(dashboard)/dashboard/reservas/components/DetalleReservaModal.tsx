@@ -32,8 +32,8 @@ interface DetalleReservaModalProps {
 }
 
 const statusConfig = {
-  pending_payment: {
-    label: 'Pendiente de pago',
+  pending: {
+    label: 'Pendiente',
     color: 'pending',
     icon: AlertCircle,
   },
@@ -55,11 +55,6 @@ const statusConfig = {
   cancelled: {
     label: 'Cancelada',
     color: 'destructive',
-    icon: XCircle,
-  },
-  cancelled_with_refund: {
-    label: 'Cancelada con reembolso',
-    color: 'warning',
     icon: XCircle,
   },
 }
@@ -303,7 +298,7 @@ export function DetalleReservaModal({
 
         {/* Acciones */}
         <div className="mt-6 flex flex-wrap gap-2">
-          {reserva.status === 'pending_payment' && onRegistrarPago && (
+          {reserva.status === 'pending' && onRegistrarPago && (
             <Button onClick={onRegistrarPago}>
               <CreditCard className="mr-2 h-4 w-4" />
               Registrar pago

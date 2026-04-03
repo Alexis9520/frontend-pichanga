@@ -1,0 +1,1 @@
+export { SolicitarOwnerModal } from './SolicitarOwnerModal'

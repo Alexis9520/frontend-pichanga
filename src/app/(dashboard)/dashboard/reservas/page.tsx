@@ -17,12 +17,11 @@ import { cn } from '@/lib/utils'
 
 // Configuración de estados
 const statusConfig = {
-  pending_payment: { label: 'Pendiente de pago', color: 'pending' as const },
+  pending: { label: 'Pendiente', color: 'pending' as const },
   confirmed: { label: 'Confirmada', color: 'success' as const },
   in_progress: { label: 'En curso', color: 'info' as const },
   completed: { label: 'Completada', color: 'success' as const },
   cancelled: { label: 'Cancelada', color: 'destructive' as const },
-  cancelled_with_refund: { label: 'C/Reembolso', color: 'warning' as const },
 }
 
 const paymentStatusConfig = {
@@ -305,8 +304,17 @@ export default function ReservasPage() {
 
                         {/* Origen */}
                         <td className="px-4 py-4">
-                          <Badge variant={reserva.source === 'app' ? 'info' : 'outline'} size="sm">
-                            {reserva.source === 'app' ? 'App' : 'Manual'}
+                          <Badge
+                            variant={reserva.source === 'app_mobile' ? 'info' : 'outline'}
+                            size="sm"
+                          >
+                            {reserva.source === 'app_mobile'
+                              ? 'App'
+                              : reserva.source === 'web_owner'
+                                ? 'Web'
+                                : reserva.source === 'phone_call'
+                                  ? 'Teléfono'
+                                  : 'Local'}
                           </Badge>
                         </td>
 
@@ -332,7 +340,7 @@ export default function ReservasPage() {
                             </Button>
 
                             {/* Acciones contextuales */}
-                            {reserva.status === 'pending_payment' && (
+                            {reserva.status === 'pending' && (
                               <Button
                                 variant="ghost"
                                 size="icon-sm"
@@ -356,8 +364,7 @@ export default function ReservasPage() {
                               </Button>
                             )}
 
-                            {(reserva.status === 'pending_payment' ||
-                              reserva.status === 'confirmed') && (
+                            {(reserva.status === 'pending' || reserva.status === 'confirmed') && (
                               <Button
                                 variant="ghost"
                                 size="icon-sm"

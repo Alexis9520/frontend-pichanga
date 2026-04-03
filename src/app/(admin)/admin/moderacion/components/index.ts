@@ -1,0 +1,1 @@
+export { ReportResolutionModal } from './ReportResolutionModal'

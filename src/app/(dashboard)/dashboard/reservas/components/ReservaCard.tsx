@@ -30,8 +30,8 @@ const statusConfig: Record<
   ReservationStatus,
   { label: string; color: string; bgColor: string; borderColor: string; icon: React.ElementType }
 > = {
-  pending_payment: {
-    label: 'Pendiente de pago',
+  pending: {
+    label: 'Pendiente',
     color: 'text-amber-600',
     bgColor: 'bg-amber-500/10',
     borderColor: 'border-amber-500/50',
@@ -64,13 +64,6 @@ const statusConfig: Record<
     bgColor: 'bg-red-500/10',
     borderColor: 'border-red-500/50',
     icon: XCircleIcon,
-  },
-  cancelled_with_refund: {
-    label: 'C/Reembolso',
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-500/10',
-    borderColor: 'border-orange-500/50',
-    icon: AlertCircle,
   },
 }
 
@@ -155,9 +148,9 @@ export function ReservaCard({
 
   // Determinar si mostrar acciones
   const canRegisterPayment =
-    reserva.status === 'pending_payment' ||
+    reserva.status === 'pending' ||
     (reserva.status === 'confirmed' && reserva.estadoPago === 'partial')
-  const canCancel = reserva.status === 'pending_payment' || reserva.status === 'confirmed'
+  const canCancel = reserva.status === 'pending' || reserva.status === 'confirmed'
 
   // Último pago
   const ultimoPago = reserva.pagos[reserva.pagos.length - 1]
@@ -174,7 +167,7 @@ export function ReservaCard({
             {/* Avatar */}
             <div
               className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold ${
-                reserva.status === 'cancelled' || reserva.status === 'cancelled_with_refund'
+                reserva.status === 'cancelled'
                   ? 'bg-muted text-muted-foreground'
                   : 'bg-primary/20 text-primary'
               }`}
@@ -333,8 +326,8 @@ export function ReservaCard({
 
             {/* Origen */}
             <div className="text-muted-foreground flex items-center gap-2 text-xs">
-              <Badge variant={reserva.source === 'app' ? 'info' : 'outline'} size="sm">
-                {reserva.source === 'app' ? (
+              <Badge variant={reserva.source === 'app_mobile' ? 'info' : 'outline'} size="sm">
+                {reserva.source === 'app_mobile' ? (
                   <>
                     <Smartphone className="mr-1 h-3 w-3" />
                     App
@@ -342,7 +335,13 @@ export function ReservaCard({
                 ) : (
                   <>
                     <UserCheck className="mr-1 h-3 w-3" />
-                    Manual
+                    {reserva.source === 'web_owner'
+                      ? 'Web'
+                      : reserva.source === 'phone_call'
+                        ? 'Llamada'
+                        : reserva.source === 'walk_in'
+                          ? 'Local'
+                          : 'Manual'}
                   </>
                 )}
               </Badge>

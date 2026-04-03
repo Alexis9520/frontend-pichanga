@@ -15,6 +15,7 @@ import {
   AlertasCard,
   AccionesRapidas,
 } from './components'
+import { AdminAccessBanner } from '@/components/admin/AdminAccessBanner'
 import type { ActionItem } from './components/ActionCards'
 import type { ProximaReserva } from './types'
 import type { CanchaEstado } from './mock-data'
@@ -118,6 +119,9 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-6">
+      {/* Admin Access Banner - Only shows for admin users */}
+      <AdminAccessBanner />
+
       {/* Header */}
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
